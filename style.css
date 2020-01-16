@@ -1,12 +1,106 @@
-body {
-	background-color: #D5DACE;
+nav,
+header,
+footer {
+	display: block;
 }
-h1 {
-	color: #ffffff;
-	font-size: 3rem;
+body {
+	line-height: 1;
+	margin: 0;
+	background-color: #E8E8E8;
+}
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.container {
-	background-color: #3B4F1F;
-	margin-top: 0;
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+* {
+    box-sizing: border-box;
+}
+nav {
+	width: 100%;
+	margin: 0;
+}
+nav ul {
+	background-color: #1C561A;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+ul.topnav li {
+	list-style: none;
+	float: left;
+}
+ul.topnav li.soc {
+	float: right;
+}
+ul.topnav li a {
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	min-height: 1rem;
+	text-align: center;
+	padding: 14px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+ul.topnav li.soc a {
+	text-align: right;
+	font-size: 10px;
+}
+ul.topnav li a:hover {
+	background-color: #0080ff;
+	color: #ffffff;
+}
+ul.topnav li.dropdownIcon {
+	display: none;
+}
+
+/*----- Mobile ------*/
+
+@media screen and (max-width: 680px) {
+	ul.topnav li:not(:nth-child(1)) {
+		display: none;
+	}
+	ul.topnav li.dropdownIcon {
+		display: block;
+		float: right;
+	}
+	ul.topnav.responsive li.dropdownIcon {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	ul.topnav.responsive {
+		position: relative;
+	}
+	ul.topnav.responsive li {
+		display: inline;
+		float: none
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
 }
