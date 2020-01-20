@@ -47,7 +47,7 @@ nav {
 	margin: 0;
 }
 nav ul {
-	background-color: #1B3300;
+	background-color: #445c3c;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -88,7 +88,7 @@ ul.social li a {
 
 
 .mainSection {
-	background-color: #E3DBDB;
+	background-color: #fae8c8;
 	margin: 0;
 	padding: 0;
 	flex-grow: 1;
@@ -113,7 +113,7 @@ img.comingSoon {
 }
 h1 {
 	text-align: center;
-	color: #4e3d42;
+	color: #595959;
 }
 
 /*----- Mobile ------*/
