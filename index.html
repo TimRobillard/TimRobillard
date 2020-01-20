@@ -4,46 +4,62 @@
 <head>
 	<title>Welcome to Tim Robillard's Website!</title>
 	<script src="https://kit.fontawesome.com/2f9ebebb54.js" crossorigin="anonymous"></script>
+
 	<!--		<script src="js.js"></script>-->
+	<link rel="stylesheet" href="bootstrap-grid.min.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<nav>
-		<div class="row">
-			<div class="col-9">
-				<ul class="topnav" id="dropdownClick">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#news">News</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="#about">About</a></li>
-					<li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li> <!-- unicode for trigram heavan -->
-				</ul>
+	<div class="container-fluid">
+		<nav>
+
+			<ul class="topnav" id="dropdownClick">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#news">News</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about">About</a></li>
+				<li class="soc">
+					<ul class="social">
+						<li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+						<li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+					</ul>
+				</li>
+				<li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li> <!-- unicode for trigram heavan -->
+			</ul>
+
+		</nav>
+		<div class="mainSection">
+			<div class="comingSoonImgDiv">
+				<div class="row">
+					<div class="col"></div>
+					<div class="col-sm-12 col-md-10">
+						<div class="comingSoonImg">
+							<img class="comingSoon" src="ComingSoon.png">
+						</div>
+					</div>
+					<div class="col"></div>
+				</div>
 			</div>
-			<div class="col-3">
-				<ul class="topnav" id="dropdownClick">
-					<li class="soc"><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
-					<li class="soc"><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
-					<li class="soc"><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-				</ul>
-			</div>
+
+			<h1>Hopefully :S</h1>
+			<footer>
+				<h1><br><br><br><br><br><br><br><br>Thanks for stopping by!</h1>
+			</footer>
 		</div>
-	</nav>
-	<div class="container">
-		<h1>Hello World!</h1>
-	</div>
 
-	<script>
-		function dropdownMenu() {
-			var x = document.getElementById("dropdownClick");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
+		<script>
+			function dropdownMenu() {
+				var x = document.getElementById("dropdownClick");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else
+					x.className = "topnav";
 			}
-		}
 
-	</script>
+		</script>
 
 </body>
 
