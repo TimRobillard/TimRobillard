@@ -1,0 +1,45 @@
+p {
+  margin: 0;
+  color: #ffffff;
+}
+
+h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+
+.container {
+  background-color: green;
+  height: 100%;
+  text-align: center;
+}
+
+.title {
+  color: green;
+  text-align: center;
+  
+  text-shadow: 3px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.card,
+.facedownCard {
+  border-radius: 9px;
+  padding: 0 5px;
+}
+
+
+.dealerScore {
+  color: green;
+}
+.dealer {
+}
+.player {
+  text-align: center;
+}
+.message {
+  text-align: center;
+}
+.messageText {
+  color: #ffffff;
+  font-size: 3rem;
+}

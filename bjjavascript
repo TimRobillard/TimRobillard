@@ -1,0 +1,363 @@
+//var newP = $("<p>");
+//newP.text("Hello World");
+//$(".test").append(newP);
+//var newS = $("<p>");
+//newS.text("Hello World");
+//$(".test").append(newS);
+
+var deckArray = [
+  {
+    "image": "Assets/AC.png",
+    "value": 11
+  },
+  {
+    "image": "Assets/2C.png",
+    "value": 2
+  },
+  {
+    "image": "Assets/3C.png",
+    "value": 3
+  },
+  {
+    "image": "Assets/4C.png",
+    "value": 4
+  },
+  {
+    "image": "Assets/5C.png",
+    "value": 5
+  },
+  {
+    "image": "Assets/6C.png",
+    "value": 6
+  },
+  {
+    "image": "Assets/7C.png",
+    "value": 7
+  },
+  {
+    "image": "Assets/8C.png",
+    "value": 8
+  },
+  {
+    "image": "Assets/9C.png",
+    "value": 9
+  },
+  {
+    "image": "Assets/10C.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/JC.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/QC.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/KC.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/AD.png",
+    "value": 11
+  },
+  {
+    "image": "Assets/2D.png",
+    "value": 2
+  },
+  {
+    "image": "Assets/3D.png",
+    "value": 3
+  },
+  {
+    "image": "Assets/4D.png",
+    "value": 4
+  },
+  {
+    "image": "Assets/5D.png",
+    "value": 5
+  },
+  {
+    "image": "Assets/6D.png",
+    "value": 6
+  },
+  {
+    "image": "Assets/7D.png",
+    "value": 7
+  },
+  {
+    "image": "Assets/8D.png",
+    "value": 8
+  },
+  {
+    "image": "Assets/9D.png",
+    "value": 9
+  },
+  {
+    "image": "Assets/10D.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/JD.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/QD.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/KD.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/AH.png",
+    "value": 11
+  },
+  {
+    "image": "Assets/2H.png",
+    "value": 2
+  },
+  {
+    "image": "Assets/3H.png",
+    "value": 3
+  },
+  {
+    "image": "Assets/4H.png",
+    "value": 4
+  },
+  {
+    "image": "Assets/5H.png",
+    "value": 5
+  },
+  {
+    "image": "Assets/6H.png",
+    "value": 6
+  },
+  {
+    "image": "Assets/7H.png",
+    "value": 7
+  },
+  {
+    "image": "Assets/8H.png",
+    "value": 8
+  },
+  {
+    "image": "Assets/9H.png",
+    "value": 9
+  },
+  {
+    "image": "Assets/10H.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/JH.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/QH.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/KH.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/AS.png",
+    "value": 11
+  },
+  {
+    "image": "Assets/2S.png",
+    "value": 2
+  },
+  {
+    "image": "Assets/3S.png",
+    "value": 3
+  },
+  {
+    "image": "Assets/4S.png",
+    "value": 4
+  },
+  {
+    "image": "Assets/5S.png",
+    "value": 5
+  },
+  {
+    "image": "Assets/6S.png",
+    "value": 6
+  },
+  {
+    "image": "Assets/7S.png",
+    "value": 7
+  },
+  {
+    "image": "Assets/8S.png",
+    "value": 8
+  },
+  {
+    "image": "Assets/9S.png",
+    "value": 9
+  },
+  {
+    "image": "Assets/10S.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/JS.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/QS.png",
+    "value": 10
+  },
+  {
+    "image": "Assets/KS.png",
+    "value": 10
+  }
+
+];
+
+function NewGame() {
+  dealer1 = Deal();
+  dealer2 = Deal();
+  player1 = Deal();
+  player2 = Deal();
+  DisplayCard(dealer1.image, ".dealer");
+  Facedown();
+  DisplayCard(player1.image, ".player");
+  DisplayCard(player2.image, ".player");
+  dealerScore = dealer1.value + dealer2.value;
+  playerScore = player1.value + player2.value;
+
+  if (dealerScore === 21)
+    DealerBlackJack();
+  if (playerScore === 21)
+    BlackJack();
+}
+
+function Deal() {
+  var len = deck.length;
+  var ind = Math.floor(Math.random() * len);
+  var card = deck[ind];
+  deck.splice(ind, 1);
+  return card;
+}
+
+function DisplayCard(card, div) {
+  var cardToDisplay = $("<img class='card'>");
+  cardToDisplay.attr("src", card);
+  $(div).append(cardToDisplay);
+}
+
+function DisplayScore() {
+  $(".dealerScore").text("Score: " + dealerScore);
+  $(".playerScore").text("Score: " + playerScore);
+
+}
+
+function Facedown() {
+  var cardToDisplay = $("<img class='facedownCard'>");
+  cardToDisplay.attr("src", "Assets/FD.png");
+  $(".dealer").append(cardToDisplay);
+}
+
+function FlipDealerCard() {
+  $(".facedownCard").css("display", "none");
+  DisplayCard(dealer2.image, ".dealer");
+  $(".dealerScore").css("color", "#ffffff");
+}
+
+function Hit() {
+  if (!gameOver) {
+    var card = Deal();
+    DisplayCard(card.image, ".player");
+    playerScore += card.value;
+    DisplayScore();
+    if (playerScore > 21)
+      Bust();
+  }
+}
+
+function Hold() {
+  if (!gameOver) {
+    FlipDealerCard();
+    for (var i = 0; i < 10; i++) {
+      if (dealerScore > 16)
+        break;
+      else {
+        var card = Deal();
+        var test = 0;
+        DisplayCard(card.image, ".dealer");
+        dealerScore += card.value;
+        DisplayScore();
+      }
+    }
+    DisplayWinner();
+    gameOver = true;
+  }
+}
+
+function BlackJack() {
+  setTimeout(function () {
+    Message("YOU GOT BLACKJACK! HOORAY!!")
+  }, 500);
+  gameOver = true;
+}
+
+function DealerBlackJack() {
+  setTimeout(FlipDealerCard(), 500);
+  setTimeout(function () {
+    Message("Dealer got BLACKJACK!!")
+  }, 100);
+  gameOver = true;
+}
+
+function Bust() {
+  FlipDealerCard();
+  setTimeout(function () {
+    Message("BUST!");
+  }, 100);
+  gameOver = true;
+}
+
+function Message(str) {
+  $(".messageText").text(str);
+  $(".messageText").css("color", "green");
+  var button = $("<div>")
+  button.html("<button onclick='window.location.reload()'>PLAY AGAIN?</button>");
+  $(".message").append(button);
+}
+
+function DisplayWinner() {
+  if (dealerScore > 21)
+    setTimeout(function () {
+      Message("DEALER BUSTS, YOU WIN!")
+    }, 500);
+  else if (playerScore > dealerScore)
+    setTimeout(function () {
+      Message("YOU WIN!")
+    }, 500);
+  else if (dealerScore < 22 && dealerScore > playerScore)
+    setTimeout(function () {
+      Message("YOU LOSE!")
+    }, 500);
+  else
+    setTimeout(function () {
+      Message("SPLIT!")
+    }, 500);
+}
+
+
+// #############################################################
+
+var deck = deckArray
+var dealerScore = 0;
+var playerScore = 0;
+var dealer1 = {};
+var dealer2 = {};
+var player1 = {};
+var player2 = {};
+var gameOver = false;
+
+NewGame();
+DisplayScore();
