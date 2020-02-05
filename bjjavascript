@@ -7,211 +7,211 @@
 
 var deckArray = [
   {
-    "image": "Assets/AC.png",
+    "image": "assets/AC.png",
     "value": 11
   },
   {
-    "image": "Assets/2C.png",
+    "image": "assets/2C.png",
     "value": 2
   },
   {
-    "image": "Assets/3C.png",
+    "image": "assets/3C.png",
     "value": 3
   },
   {
-    "image": "Assets/4C.png",
+    "image": "assets/4C.png",
     "value": 4
   },
   {
-    "image": "Assets/5C.png",
+    "image": "assets/5C.png",
     "value": 5
   },
   {
-    "image": "Assets/6C.png",
+    "image": "assets/6C.png",
     "value": 6
   },
   {
-    "image": "Assets/7C.png",
+    "image": "assets/7C.png",
     "value": 7
   },
   {
-    "image": "Assets/8C.png",
+    "image": "assets/8C.png",
     "value": 8
   },
   {
-    "image": "Assets/9C.png",
+    "image": "assets/9C.png",
     "value": 9
   },
   {
-    "image": "Assets/10C.png",
+    "image": "assets/10C.png",
     "value": 10
   },
   {
-    "image": "Assets/JC.png",
+    "image": "assets/JC.png",
     "value": 10
   },
   {
-    "image": "Assets/QC.png",
+    "image": "assets/QC.png",
     "value": 10
   },
   {
-    "image": "Assets/KC.png",
+    "image": "assets/KC.png",
     "value": 10
   },
   {
-    "image": "Assets/AD.png",
+    "image": "assets/AD.png",
     "value": 11
   },
   {
-    "image": "Assets/2D.png",
+    "image": "assets/2D.png",
     "value": 2
   },
   {
-    "image": "Assets/3D.png",
+    "image": "assets/3D.png",
     "value": 3
   },
   {
-    "image": "Assets/4D.png",
+    "image": "assets/4D.png",
     "value": 4
   },
   {
-    "image": "Assets/5D.png",
+    "image": "assets/5D.png",
     "value": 5
   },
   {
-    "image": "Assets/6D.png",
+    "image": "assets/6D.png",
     "value": 6
   },
   {
-    "image": "Assets/7D.png",
+    "image": "assets/7D.png",
     "value": 7
   },
   {
-    "image": "Assets/8D.png",
+    "image": "assets/8D.png",
     "value": 8
   },
   {
-    "image": "Assets/9D.png",
+    "image": "assets/9D.png",
     "value": 9
   },
   {
-    "image": "Assets/10D.png",
+    "image": "assets/10D.png",
     "value": 10
   },
   {
-    "image": "Assets/JD.png",
+    "image": "assets/JD.png",
     "value": 10
   },
   {
-    "image": "Assets/QD.png",
+    "image": "assets/QD.png",
     "value": 10
   },
   {
-    "image": "Assets/KD.png",
+    "image": "assets/KD.png",
     "value": 10
   },
   {
-    "image": "Assets/AH.png",
+    "image": "assets/AH.png",
     "value": 11
   },
   {
-    "image": "Assets/2H.png",
+    "image": "assets/2H.png",
     "value": 2
   },
   {
-    "image": "Assets/3H.png",
+    "image": "assets/3H.png",
     "value": 3
   },
   {
-    "image": "Assets/4H.png",
+    "image": "assets/4H.png",
     "value": 4
   },
   {
-    "image": "Assets/5H.png",
+    "image": "assets/5H.png",
     "value": 5
   },
   {
-    "image": "Assets/6H.png",
+    "image": "assets/6H.png",
     "value": 6
   },
   {
-    "image": "Assets/7H.png",
+    "image": "assets/7H.png",
     "value": 7
   },
   {
-    "image": "Assets/8H.png",
+    "image": "assets/8H.png",
     "value": 8
   },
   {
-    "image": "Assets/9H.png",
+    "image": "assets/9H.png",
     "value": 9
   },
   {
-    "image": "Assets/10H.png",
+    "image": "assets/10H.png",
     "value": 10
   },
   {
-    "image": "Assets/JH.png",
+    "image": "assets/JH.png",
     "value": 10
   },
   {
-    "image": "Assets/QH.png",
+    "image": "assets/QH.png",
     "value": 10
   },
   {
-    "image": "Assets/KH.png",
+    "image": "assets/KH.png",
     "value": 10
   },
   {
-    "image": "Assets/AS.png",
+    "image": "assets/AS.png",
     "value": 11
   },
   {
-    "image": "Assets/2S.png",
+    "image": "assets/2S.png",
     "value": 2
   },
   {
-    "image": "Assets/3S.png",
+    "image": "assets/3S.png",
     "value": 3
   },
   {
-    "image": "Assets/4S.png",
+    "image": "assets/4S.png",
     "value": 4
   },
   {
-    "image": "Assets/5S.png",
+    "image": "assets/5S.png",
     "value": 5
   },
   {
-    "image": "Assets/6S.png",
+    "image": "assets/6S.png",
     "value": 6
   },
   {
-    "image": "Assets/7S.png",
+    "image": "assets/7S.png",
     "value": 7
   },
   {
-    "image": "Assets/8S.png",
+    "image": "assets/8S.png",
     "value": 8
   },
   {
-    "image": "Assets/9S.png",
+    "image": "assets/9S.png",
     "value": 9
   },
   {
-    "image": "Assets/10S.png",
+    "image": "assets/10S.png",
     "value": 10
   },
   {
-    "image": "Assets/JS.png",
+    "image": "assets/JS.png",
     "value": 10
   },
   {
-    "image": "Assets/QS.png",
+    "image": "assets/QS.png",
     "value": 10
   },
   {
-    "image": "Assets/KS.png",
+    "image": "assets/KS.png",
     "value": 10
   }
 
