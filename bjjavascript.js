@@ -222,6 +222,8 @@ function NewGame() {
   dealer2 = Deal();
   player1 = Deal();
   player2 = Deal();
+  if (player1.value === 11 || player2.value === 11)
+    aces++;
   DisplayCard(dealer1.image, ".dealer");
   Facedown();
   DisplayCard(player1.image, ".player");
@@ -257,7 +259,7 @@ function DisplayScore() {
 
 function Facedown() {
   var cardToDisplay = $("<img class='facedownCard'>");
-  cardToDisplay.attr("src", "Assets/FD.png");
+  cardToDisplay.attr("src", "assets/FD.png");
   $(".dealer").append(cardToDisplay);
 }
 
@@ -270,11 +272,20 @@ function FlipDealerCard() {
 function Hit() {
   if (!gameOver) {
     var card = Deal();
+    if (card.value === 11)
+      aces++;
     DisplayCard(card.image, ".player");
     playerScore += card.value;
     DisplayScore();
-    if (playerScore > 21)
-      Bust();
+    if (playerScore > 21){
+      if (aces > 0){
+        playerScore -= 10;
+        aces--;
+        DisplayScore();
+      }
+      else
+        Bust();
+    }
   }
 }
 
@@ -357,6 +368,7 @@ var dealer1 = {};
 var dealer2 = {};
 var player1 = {};
 var player2 = {};
+var aces = 0;
 var gameOver = false;
 
 NewGame();
