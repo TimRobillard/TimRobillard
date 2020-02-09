@@ -217,159 +217,163 @@ var deckArray = [
 
 ];
 
-function NewGame() {
-  dealer1 = Deal();
-  dealer2 = Deal();
-  player1 = Deal();
-  player2 = Deal();
-  if (player1.value === 11 || player2.value === 11)
-    aces++;
-  DisplayCard(dealer1.image, ".dealer");
-  Facedown();
-  DisplayCard(player1.image, ".player");
-  DisplayCard(player2.image, ".player");
-  dealerScore = dealer1.value + dealer2.value;
-  playerScore = player1.value + player2.value;
+//######## Functions #########
 
-  if (dealerScore === 21)
-    DealerBlackJack();
-  if (playerScore === 21)
-    BlackJack();
+function NewGame() {
+  if (gameOver) {
+    ClearTable();
+    deck = [...deckArray];
+    gameOver = false;
+    Deal(player, ".playerInit", "up");
+    Deal(dealer, ".dealerInit", "up");
+    Deal(player, ".playerInit", "up");
+    Deal(dealer, ".dealerInit", "down");
+
+    if (BlackJack(dealer) && BlackJack(player)) {
+      FlipDealerCard();
+      gameOver = true;
+      Message("SPLIT");
+    } else if (BlackJack(dealer)) {
+      FlipDealerCard();
+      gameOver = true;
+      Message("DEALER GOT BLACKJACK!");
+    } else if (BlackJack(player)) {
+      FlipDealerCard();
+      gameOver = true;
+      Message("YOU GOT BLACKJACK!");
+    }
+    DisplayScore();
+  }
 }
 
-function Deal() {
+
+function Deal(who, where, face) {
   var len = deck.length;
   var ind = Math.floor(Math.random() * len);
   var card = deck[ind];
   deck.splice(ind, 1);
-  return card;
+  if (card.value === 11)
+    who.aces++;
+  if (face === "down") {
+    faceDownCard = card;
+    var cardToDisplay = $("<img class = 'card'>");
+    cardToDisplay.attr('src', 'assets/FD.png');
+    $(where).append(cardToDisplay);
+  } else {
+    var cardToDisplay = $("<img class = 'card'>");
+    cardToDisplay.attr('src', card.image);
+    $(where).append(cardToDisplay);
+  }
+  who.score += card.value;
+  if (who.score > 21 && who.aces > 0) {
+    who.score -= 10;
+    who.aces--;
+  }
+
 }
 
-function DisplayCard(card, div) {
-  var cardToDisplay = $("<img class='card'>");
-  cardToDisplay.attr("src", card);
-  $(div).append(cardToDisplay);
-}
-
-function DisplayScore() {
-  $(".dealerScore").text("Score: " + dealerScore);
-  $(".playerScore").text("Score: " + playerScore);
-
-}
-
-function Facedown() {
-  var cardToDisplay = $("<img class='facedownCard'>");
-  cardToDisplay.attr("src", "assets/FD.png");
-  $(".dealer").append(cardToDisplay);
-}
-
-function FlipDealerCard() {
-  $(".facedownCard").css("display", "none");
-  DisplayCard(dealer2.image, ".dealer");
-  $(".dealerScore").css("color", "#ffffff");
-}
-
-function Hit() {
+function HitMe() {
   if (!gameOver) {
-    var card = Deal();
-    if (card.value === 11)
-      aces++;
-    DisplayCard(card.image, ".player");
-    playerScore += card.value;
+    var card = Deal(player, ".player", "up");
     DisplayScore();
-    if (playerScore > 21){
-      if (aces > 0){
-        playerScore -= 10;
-        aces--;
-        DisplayScore();
-      }
-      else
-        Bust();
+    if (player.score > 21) {
+      Bust();
     }
   }
 }
 
-function Hold() {
+function Stand() {
   if (!gameOver) {
     FlipDealerCard();
-    for (var i = 0; i < 10; i++) {
-      if (dealerScore > 16)
-        break;
-      else {
-        var card = Deal();
-        var test = 0;
-        DisplayCard(card.image, ".dealer");
-        dealerScore += card.value;
-        DisplayScore();
-      }
-    }
-    DisplayWinner();
     gameOver = true;
+    while (dealer.score < 17) {
+      Deal(dealer, ".dealer", "up");
+      DisplayScore();
+      window.setTimeout(function() {return 1+1}, 2000);
+      
+    }
+    if (dealer.score > 21) {
+      Message("DEALER BUSTS! YOU WIN");
+    } else {
+      DisplayWinner();
+    }
   }
 }
 
-function BlackJack() {
-  setTimeout(function () {
-    Message("YOU GOT BLACKJACK! HOORAY!!")
-  }, 500);
-  gameOver = true;
-}
-
-function DealerBlackJack() {
-  setTimeout(FlipDealerCard(), 500);
-  setTimeout(function () {
-    Message("Dealer got BLACKJACK!!")
-  }, 100);
-  gameOver = true;
+function BlackJack(who) {
+  if (who.score === 21)
+    return true;
+  else
+    return false;
 }
 
 function Bust() {
+  Message("PLAYER BUSTED");
   FlipDealerCard();
-  setTimeout(function () {
-    Message("BUST!");
-  }, 100);
   gameOver = true;
 }
 
-function Message(str) {
-  $(".messageText").text(str);
-  $(".messageText").css("color", "green");
-  var button = $("<div>")
-  button.html("<button onclick='window.location.reload()'>PLAY AGAIN?</button>");
-  $(".message").append(button);
+function FlipDealerCard() {
+  $(".dealerInit .card:last-child").remove();
+    var cardToDisplay = $("<img class = 'card'>");
+    cardToDisplay.attr('src', faceDownCard.image);
+    $(".dealerInit").append(cardToDisplay);
+    $(".dealerScore").css("color", "#ffffff");
+}
+
+function DisplayScore() {
+  $(".dealerScore").text("SCORE: " + dealer.score);
+  $(".playerScore").text("SCORE: " + player.score);
 }
 
 function DisplayWinner() {
-  if (dealerScore > 21)
-    setTimeout(function () {
-      Message("DEALER BUSTS, YOU WIN!")
-    }, 500);
-  else if (playerScore > dealerScore)
-    setTimeout(function () {
-      Message("YOU WIN!")
-    }, 500);
-  else if (dealerScore < 22 && dealerScore > playerScore)
-    setTimeout(function () {
-      Message("YOU LOSE!")
-    }, 500);
-  else
-    setTimeout(function () {
-      Message("SPLIT!")
-    }, 500);
+  if (player.score > dealer.score) {
+    Message("YOU WIN");
+  } else if (player.score === dealer.score) {
+    Message("PUSH");
+  } else {
+    Message("YOU LOSE");
+  }
+
 }
 
+function ClearTable() {
+  $(".dealerInit .card").remove();
+  $(".playerInit .card").remove();
+  $(".dealer .card").remove();
+  $(".player .card").remove();
+  $(".messageText").text("");
+  $(".message .newGameBtn").remove();
+  $(".dealerScore").css("color", "rgba(0,0,0,0)");
+  $(".message").removeClass("messageDisplay");
+  $(".messageText").removeClass("messageTextDisplay");
+  dealer.score = 0;
+  player.score = 0;
+  dealer.aces = 0;
+  player.aces = 0;
+}
 
-// #############################################################
+function Message(str) {
+  setTimeout(function() {$(".messageText").html("<br>" + str);
+  var newGameBtn = $("<button class='newGameBtn' onclick='NewGame()'>NEW GAME</button>")
+  $(".message").append(newGameBtn);
+  $(".message").addClass("messageDisplay");
+  $(".messageText").addClass("messageTextDisplay");}, 250);
+}
 
-var deck = deckArray
-var dealerScore = 0;
-var playerScore = 0;
-var dealer1 = {};
-var dealer2 = {};
-var player1 = {};
-var player2 = {};
-var aces = 0;
-var gameOver = false;
+//##############################################
 
+var deck = [];
+var gameOver = true;
+var dealer = {
+  "name": "dealer",
+  "score": 0,
+  "aces": 0
+};
+var player = {
+  "name": "player",
+  "score": 0,
+  "aces": 0
+};
+var faceDownCard = {};
 NewGame();
-DisplayScore();

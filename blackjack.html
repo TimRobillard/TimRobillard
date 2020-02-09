@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <title>World's Great BlackJack Game</title>
-  <link rel="stylesheet" href="bjstyle.css">
 
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bjstyle.css">
 </head>
 
 <body>
-  <header>
-    <h1 class="title">World's Great BlackJack Game</h1>
-  </header>
   <div class="container">
-    <div>
-      <h1>Dealer</h1>
-    </div>
-    <div class="dealer">
+    <div class="table">
 
-    </div>
-    <div>
-      <p class="dealerScore">Score: </p>
+      <div class="cards">
+        <div class="left">
+          <h1>PLAYER</h1>
+          <div class="playerContainer">
+            <div class="playerInit"></div>
+            <div class="playerScore">
+              <p></p>
+            </div>
+            <div class="player"></div>
+          </div>
+
+
+        </div>
+
+        <div class="right">
+          <h1>DEALER</h1>
+          <div class="dealerContainer">
+            <div class="dealerInit"></div>
+            <div class="dealerScore">
+              <p>SC</p>
+            </div>
+            <div class="dealer"></div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="buttons">
+          <button class="button" onclick="HitMe()">HIT ME</button>
+          <button class="button" onclick="Stand()">STAND</button>
+        </div>
     </div>
 
-    <div>
-      <h1>Player</h1>
-    </div>
-
-    <div class="player">
-
-    </div>
-    <div>
-      <p class="playerScore">Score: </p>
-    </div>
-
-    <button onclick="Hit()">HIT ME</button>
-    <button onclick="Hold()">HOLD</button>
   </div>
-  <div>
+  <div class="messageContainer">
     <div class="message">
-      <h1 class="messageText">placeholder</h1>
+      <h1 class="messageText"><br></h1>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-  <script src="bjjavascript.js"></script>
+  <script type="text/javascript" src="bjjavascript.js"></script>
 </body></html>
