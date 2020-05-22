@@ -1,66 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tim Robillard's Website</title>
+    <link rel="icon" href="assets/logos/Albatrooss-logo-filled-shadow-blue-white.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index/style.css" />
+    <script defer src="index/js.js"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        id="logo-left"
+        class="logo-bracket logo-left-hidden"
+        src="assets/logos/Albatrooss-logo-bracket-left.svg"
+        alt="left-bracket"
+      />
+      <img
+        id="logo-bird"
+        class="header-logo-hidden"
+        src="assets/logos/Albatrooss-logo-bird-champagne-pink.svg"
+        alt="logo"
+      />
+      <img
+        id="logo-right"
+        class="logo-bracket logo-right-hidden"
+        src="assets/logos/Albatrooss-logo-bracket-right.svg"
+        alt="left-bracket"
+      />
+    </header>
+    <!-- <nav>
+      <div class="nav-current">
+        <img
+          class="albatrooss-logo"
+          src="assets/logos/Albatrooss-logo-in-champagne-pink.svg"
+          alt="logo"
+        />
+        <h2>HOME</h2>
+      </div>
+      <ul class="nav-links">
+        <li><h2>ABOUT</h2></li>
+        <li>
+          <a href="https://albatrooss.github.io/black-jack/"><h2>BLACKJACK</h2></a>
+        </li>
+        <li>
+          <a href="https://albatrooss.github.io/tic-tac-toe/"
+            ><h2>TIC-TAC-TOE</h2></a
+          >
+        </li>
+        <li><h2>CONTACT</h2></li>
+      </ul>
+    </nav> -->
+    <section class="about-me">
+      <!-- <div class="about-me-box">
+        <img src="assets/imgs/TREX Mug.jpg" alt="rawr" />
+        <p>Hello! My name is Tim Robillard and I am</p>
+      </div> -->
+    </section>
+    <main></main>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/tim-robillard-82a39713b/"
+            ><i class="fa fa-linkedin-square"></i
+          ></a>
+        </li>
+        <li>
+          <a href=""><i class="fa fa-instagram"></i></a>
+        </li>
+        <li>
+          <a id="email-icon" href=""><i class="fa fa-envelope"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/Albatrooss"><i class="fa fa-github-square"></i></a>
+        </li>
+      </ul>
 
-<head>
-	<title>Welcome to Tim Robillard's Website!</title>
-	<script src="https://kit.fontawesome.com/2f9ebebb54.js" crossorigin="anonymous"></script>
-
-	<!--		<script src="js.js"></script>-->
-	<link rel="stylesheet" href="bootstrap-grid.min.css">
-	<link rel="stylesheet" href="bootstrap.min.css">
-	<link rel="stylesheet" href="/index/style.css">
-</head>
-
-<body>
-	<div class="container-fluid">
-		<nav>
-
-			<ul class="topnav" id="dropdownClick">
-				<li><a href="#home">Home</a></li>
-				<li><a href="#news">News</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li><a href="about.html">About</a></li>
-				<li class="soc">
-					<ul class="social">
-						<li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-						<li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
-						<li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
-					</ul>
-				</li>
-				<li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li> <!-- unicode for trigram heavan -->
-			</ul>
-
-		</nav>
-		<div class="mainSection">
-			<div class="comingSoonImgDiv">
-				<div class="row">
-					<div class="col"></div>
-					<div class="col-sm-12 col-md-10">
-						<div class="comingSoonImg">
-							<img class="comingSoon" src="assets/ComingSoon.png">
-						</div>
-					</div>
-					<div class="col"></div>
-				</div>
-			</div>
-
-			<h1>Hopefully :S</h1>
-			<footer>
-				<h1><br><br><br><br><br><br><br><br>Thanks for stopping by!</h1>
-			</footer>
-		</div>
-
-		<script>
-			function dropdownMenu() {
-				var x = document.getElementById("dropdownClick");
-				if (x.className === "topnav") {
-					x.className += " responsive";
-				} else
-					x.className = "topnav";
-			}
-
-		</script>
-	</div>
-</body>
-
+      <p>&copy; Tim Robillard 2020</p>
+    </footer>
+  </body>
 </html>
