@@ -32,17 +32,18 @@ header img {
 }
 header img.logo-bracket {
 	width: 30vmin;
+	transform: scaleY(0.75);
 }
 #logo-right {
-	transform: scaleX(-1);
+	transform: scale(-1, 0.75);
 }
 .logo-left-hidden {
-	top: -50vh;
+	top: -75vh;
 	opacity: 0;
 	transition: all .5s ease-out;
 }
 .header-logo-hidden {
-	left: -50vh;
+	left: -75vw;
 	opacity: 0;
 }
 .logo-right-hidden {
@@ -59,10 +60,6 @@ header img.logo-bracket {
 	left: 0;
 	opacity: 1;
 	transition: left .5s ease-out;
-}
-.logo-left-scroll-out {
-	top: 75vh;
-	transition: left .5s ease-in;
 }
 .logo-scroll-out {
 	left: 75vw;
