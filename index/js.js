@@ -15,7 +15,7 @@ function emailClick(e) {
 }
 
 window.onscroll = function () {
-  if (window.scrollY === 0) {
+  if (window.scrollY <= 0) {
     headerLogo.className = 'logo-on-load';
     headerLogoLeft.classList.add('logo-bracket-on-load');
     headerLogoRight.classList.add('logo-bracket-on-load');

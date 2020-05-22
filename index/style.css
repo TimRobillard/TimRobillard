@@ -32,15 +32,17 @@ header img {
 }
 header img.logo-bracket {
 	width: 30vmin;
-	margin-left: 5vmin;
+}
+#logo-right {
+	transform: scaleX(-1);
 }
 .logo-left-hidden {
-	top: -50vw;
+	top: -50vh;
 	opacity: 0;
 	transition: all .5s ease-out;
 }
 .header-logo-hidden {
-	left: -50vw;
+	left: -50vh;
 	opacity: 0;
 }
 .logo-right-hidden {
