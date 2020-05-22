@@ -31,10 +31,6 @@ window.onscroll = function () {
   }
 };
 
-window.innerWidth < window.innerHeight
-  ? (headerLogo.style.width = '75%')
-  : (headerLogo.style.height = '75%');
-
 setTimeout(function () {
   headerLogo.className = 'logo-on-load';
   headerLogoLeft.classList.add('logo-bracket-on-load');

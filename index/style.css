@@ -28,16 +28,11 @@ header {
 }
 header img {
 	position: relative;
-	height: 75%;
+	height: 75vmin;
 }
 header img.logo-bracket {
-	height: 35%;
-}
-#logo-left {
-	margin-left: 10%;
-}
-#logo-right {
-	margin-right: 10%;
+	width: 30vmin;
+	margin-left: 5vmin;
 }
 .logo-left-hidden {
 	top: -50vw;
