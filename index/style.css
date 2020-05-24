@@ -86,7 +86,7 @@ header img.logo-bracket {
 }
 .flashy-move {
 	left: 150vw;
-	transition: left 1s ease-in;
+	transition: left .5s ease-in;
 }
 .nav-current {
 	background-color: var(--gunmetal);
@@ -173,6 +173,13 @@ footer ul {
 footer ul li a {
 	font-size: 1.5em;
 	color: var(--champagne-pink);
+}
+
+@media only screen and (min-width: 500px) {
+	.flashy-move {
+		left: 150vw;
+		transition: left 1s ease-in;
+	}
 }
 
 @media only screen and (min-width: 950px) {
