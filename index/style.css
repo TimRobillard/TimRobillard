@@ -18,7 +18,7 @@ body {
 	flex-direction: column;
 }
 header {
-	height: 100vh;
+	height: 99vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -64,6 +64,29 @@ header img.logo-bracket {
 .logo-scroll-out {
 	left: 75vw;
 	transition: left .5s ease-in;
+}
+.flashy-thing {
+	height: 5px;
+	/* background-color: #555; */
+}
+.flashy-div {
+	height: 100%;
+	width: 150px;
+	background-color: #aaa;
+	position: relative;
+	top: 2.5px;
+	left: -200px;
+	border-radius: 20%;
+}
+.blurr {
+	height: 100%;
+	width: 80px;
+	margin-left: 100px;
+	background-color: #fff;
+}
+.flashy-move {
+	left: 150vw;
+	transition: left 1s ease-in;
 }
 .nav-current {
 	background-color: var(--gunmetal);

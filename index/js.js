@@ -1,8 +1,9 @@
-let emailIcon = document.getElementById('email-icon');
+const emailIcon = document.getElementById('email-icon');
 let firstScroll = true;
-let headerLogo = document.querySelector('#logo-bird');
-let headerLogoLeft = document.querySelector('#logo-left');
-let headerLogoRight = document.querySelector('#logo-right');
+const headerLogo = document.querySelector('#logo-bird');
+const headerLogoLeft = document.querySelector('#logo-left');
+const headerLogoRight = document.querySelector('#logo-right');
+const flashyThing = document.querySelector('.flashy-div');
 
 emailIcon.addEventListener('click', emailClick);
 
@@ -36,3 +37,7 @@ setTimeout(function () {
   headerLogoLeft.classList.add('logo-bracket-on-load');
   headerLogoRight.classList.add('logo-bracket-on-load');
 }, 0);
+
+setInterval(function () {
+  flashyThing.classList.toggle('flashy-move');
+}, 1500);
