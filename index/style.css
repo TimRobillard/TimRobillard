@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Permanent+Marker&display=swap');
 * {
 	margin: 0;
 	padding: 0;
@@ -68,6 +69,7 @@ header img.logo-bracket {
 .flashy-thing {
 	height: 5px;
 	/* background-color: #555; */
+	overflow: hidden;
 }
 .flashy-div {
 	height: 100%;
@@ -134,6 +136,13 @@ nav li {
 	width: 200px;
 	text-align: center;
 }
+h1 {
+	text-align: center;
+	color: var(--champagne-pink);
+	font-family: 'Permanent Marker', cursive;
+	font-size: 3rem;
+	letter-spacing: 2px;
+}
 .about-me {
 	background-color: var(--shadow-blue);
 	height: 100vh;
@@ -148,10 +157,18 @@ nav li {
 	align-items: center;
 }
 .about-me-box img {
-	max-width: 400px;
-	border-radius: 25px;
+	width: 100%;
 }
-
+.about-me h4 {
+	color: var(--champagne-pink);
+	text-align: center;
+	font-family: 'Changa', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+}
+.about-me h4::first-letter {
+	font-size: 3rem;
+}
 main {
 	height: 100vh;
 	background-color: var(--bdazlled-blue);
@@ -186,12 +203,26 @@ footer ul li a {
 	.about-me-box {
 		width: 500px;
 		margin: 10px auto;
-		border-radius: 8px;
-		border: 3px solid #444;
+		border-radius: 20%;
+		border: 5px solid #444;
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+	h1 {
+		font-size: 4rem;
+		letter-spacing: 5px;
 	}
 	.about-me {
 		width: 100%;
+	}
+	.about-me-box img {
+		max-width: 450px;
+		border-radius: 20%;
+	}
+	.about-me h4 {
+		font-size: 2rem;
+	}
+	.about-me:first-letter {
+		font-size: 4rem;
 	}
 	footer {
 		padding: 0 100px;
