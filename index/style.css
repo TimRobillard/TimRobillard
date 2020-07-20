@@ -19,7 +19,7 @@ body {
 	flex-direction: column;
 }
 header {
-	height: 99vh;
+	height: 100vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -67,6 +67,8 @@ header img.logo-bracket {
 	transition: left .5s ease-in;
 }
 .flashy-thing {
+	position: relative;
+	top: -10px;
 	height: 5px;
 	/* background-color: #555; */
 	overflow: hidden;
@@ -146,15 +148,19 @@ h1 {
 .about-me {
 	background-color: var(--shadow-blue);
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .about-me-box {
 	background-color: var(--champagne-pink);
 	width: 100%;
-	height: 500px;
+	height: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin: 50px 0;
 }
 .about-me-box img {
 	width: 100%;
@@ -172,6 +178,40 @@ h1 {
 main {
 	height: 100vh;
 	background-color: var(--bdazlled-blue);
+}
+
+main a:hover {
+	cursor: pointer;
+}
+
+.portfolio-wrapper {
+	text-decoration: none;
+	color: var(--champagne-pink)
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.screenshot-container {
+	width: 100vw;
+	background-color: var(--champagne-pink);
+	display: flex;
+	justify-content: center;
+}
+
+.screenshot {
+	height: 185px;
+	border: 2px solid var(--gunmetal)
+}
+
+.view-code {
+	margin-top: 40px;
+	text-align: center;
+	color: #fff;
 }
 
 footer {
