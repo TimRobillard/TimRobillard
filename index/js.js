@@ -2,7 +2,6 @@ const emailIcon = document.getElementById('email-icon');
 const headerLogo = document.querySelector('#logo-bird');
 const headerLogoLeft = document.querySelector('#logo-left');
 const headerLogoRight = document.querySelector('#logo-right');
-const flashyThing = document.querySelector('.flashy-div');
 
 let firstScroll = true;
 
@@ -44,9 +43,6 @@ setTimeout(function () {
   headerLogoRight.classList.add('logo-bracket-on-load');
 }, 0);
 
-// setInterval(function () {
-//   flashyThing.classList.toggle('flashy-move');
-// }, 1500);
 
 function pageScroll() {
   window.scrollBy(0, 5);
