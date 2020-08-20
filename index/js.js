@@ -1,7 +1,16 @@
+// Elements
+
 const burger = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobile');
+const portDetailArrows = document.querySelectorAll('main section i');
+const portDetails = document.querySelectorAll('main section div');
+
+//-----------------------
 
 burger.addEventListener('click', burgerClick);
+portDetails.forEach((x, i) => x.addEventListener('click', () => revealPortDetails(i)));
+
+//------------------------
 
 function burgerClick(e) {
   e.preventDefault();
@@ -12,6 +21,12 @@ function burgerClick(e) {
     e.target.parentNode.classList.add('flipped')
     mobileMenu.className = 'showing';
   }
+}
+
+function revealPortDetails(i) {
+  console.log('hello')
+  portDetails[i].children[2].classList.toggle('details-showing');
+  portDetailArrows[i].classList.toggle('flipped');
 }
 
 
