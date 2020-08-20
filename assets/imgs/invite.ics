@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+PRODID:-//Splash Event Planning System
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20200817T183454Z
+UID:6c74cfa244b5c72b3eb3fa61f4bb1377eb367459@shopifyinternbo
+ otcamps.splashthat.com
+URL:https://shopifyinternbootcamps.splashthat.com
+DTSTART:20200825T160000Z
+DTEND:20200825T173000Z
+SUMMARY:Shopify Internships: Coding Programs and Bootcamps
+DESCRIPTION:For more information - https://shopifyinternboot
+ camps.splashthat.com
+LOCATION:Online Webinar
+END:VEVENT
+END:VCALENDAR
