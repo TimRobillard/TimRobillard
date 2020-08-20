@@ -3,33 +3,27 @@
 const burger = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobile');
 const portDetailArrows = document.querySelectorAll('main section i');
-const portDetails = document.querySelectorAll('main section div');
+const portDetails = document.querySelectorAll('main section div.deets');
+const navLinks = document.querySelectorAll('header a');
 
 //-----------------------
 
-burger.addEventListener('click', burgerClick);
+burger.addEventListener('click', toggleNav);
 portDetails.forEach((x, i) => x.addEventListener('click', () => revealPortDetails(i)));
+navLinks.forEach((x, i) => x.addEventListener('click', toggleNav));
 
 //------------------------
 
-function burgerClick(e) {
-  e.preventDefault();
-  if (e.target.parentNode.className.split(' ').includes('flipped')) {
-    e.target.parentNode.classList.remove('flipped')
-    mobileMenu.className = '';
-  } else {
-    e.target.parentNode.classList.add('flipped')
-    mobileMenu.className = 'showing';
-  }
-}
-
 function revealPortDetails(i) {
-  console.log('hello')
-  portDetails[i].children[2].classList.toggle('details-showing');
+  portDetails[i].classList.toggle('details-showing');
+  portDetails[i].parentElement.classList.toggle('expand-section');
   portDetailArrows[i].classList.toggle('flipped');
 }
 
-
+function toggleNav() {
+  mobileMenu.classList.toggle('showing');
+  burger.parentElement.classList.toggle('flipped')
+}
 
 
 
