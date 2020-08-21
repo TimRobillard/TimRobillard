@@ -36,12 +36,11 @@ a {
 }
 
 #burger {
-	width: 75px;
 	color: var(--black);
 	padding: 5px;
 	margin: 5px;
 	border-radius: 5px;
-	width: 66px;
+	width: 55px;
 	background-color: rgba(104, 133, 87, .33);
 }
 .burger-container {
@@ -320,6 +319,10 @@ main section .img-wrapper {
 	color: var(--accent01);
 	text-decoration: underline;
 }
+
+.buoy {
+	background-color: steelblue;
+}
 /*----------------------------- CONTACT -------------------------------------------*/
 
 
@@ -422,9 +425,37 @@ footer {
 
 	/*----------------------------- PORTFOLIO -------------------------------------------*/
 
+	main {
+		width: 100vw;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	main section {
+		max-height: 100vh;
+	}
+	.deets {
+		width: 30vw;
+	}
+
+	main section:nth-child(2),
+	main section:nth-child(3) {
+		background-color: var(--primary-dark);
+	}
+
+	main section:nth-child(1),
+	main section:nth-child(4) {
+		background-color: var(--black);
+	}
+	main section:nth-child(4) img {
+		margin: 15px 0;
+	}
+
 	/*----------------------------- CONTACT -------------------------------------------*/
 
 	/*----------------------------- FOOTER -------------------------------------------*/
-
+	footer,
+	#contact {
+		background-color: var(--white)
+	}
 
 }
