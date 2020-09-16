@@ -289,7 +289,7 @@ section#home .logos .img-container img#ps, section#home .logos .img-container im
   position: fixed;
   top: 0;
   left: 0;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 11;
