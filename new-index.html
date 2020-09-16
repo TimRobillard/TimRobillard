@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tim Robillard</title>
   <link rel="icon" href="assets/logos/Albatrooss-logo-darkgrey.png" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link rel="stylesheet" href="new/style.css">
   <script src="new/script.js" defer></script>
 </head>
@@ -22,30 +23,47 @@
     <div class="contact-container">
       <a href="#contact">Contact</a>
     </div>
-    <div id='burger'>
-      <hr id="hr0" />
-      <hr id="hr1" />
-      <hr id="hr2" />
-    </div>
   </header>
+  <div id='burger'>
+    <hr id="hr0" />
+    <hr id="hr1" />
+    <hr id="hr2" />
+  </div>
   <section id="home">
     <div class="buffer"></div>
     <h1>Tim</h1>
     <span>Robillard</span>
     <div class="logos">
+      <div class="img-container"><img src="assets/logos/react.png" alt=""></div>
+      <div class="img-container"><img src="assets/logos/node.png" alt="" id="node"></div>
       <div class="img-container"><img src="assets/logos/javascript.png" alt=""></div>
       <div class="img-container"><img src="assets/logos/html.png" alt=""></div>
       <div class="img-container"><img src="assets/logos/css.png" alt=""></div>
-      <div class="img-container"><img src="assets/logos/react.png" alt=""></div>
       <div class="img-container"><img src="assets/logos/python.png" alt=""></div>
+      <div class="img-container"><img src="assets/logos/django.png" alt=""></div>
+      <div class="img-container"><img src="assets/logos/github.png" alt=""></div>
+      <div class="img-container"><img src="assets/logos/illustrator.png" alt=""></div>
+      <div class="img-container"><img src="assets/logos/photoshop.png" alt="" id="ps"></div>
+      <div class="img-container"><img src="assets/logos/mongo.png" alt=""></div>
+      <div class="img-container"><img src="assets/logos/mysql.png" alt=""></div>
       <div class="img-container"><img src="assets/logos/blender.png" alt=""></div>
-      <div class="img-container"><img src="assets/logos/unity.png" alt=""></div>
-      <div class="img-container"><img src="assets/logos/adobe.png" alt=""></div>
+      <div class="img-container"><img src="assets/logos/unity.png" alt="" id="unity"></div>
+      <div class="img-container"><img src="assets/logos/csharp.png" alt=""></div>
     </div>
+  </section>
+  <section id="menu" class="hidden">
+    <ul>
+      <li><a><Home href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </section>
   <section id="about">
     <div class="buffer"></div>
-    ABOUT
+    <h2>Software / Design / Art</h2>
+    <img src="assets/imgs/BnW-headshot.jpg" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo eaque sequi maxime rem cupiditate molestiae soluta reiciendis pariatur necessitatibus saepe iste deleniti ad autem, nesciunt animi quaerat accusantium perspiciatis.</p>
   </section>
   <main id="portfolio">
     <div class="buffer"></div>
@@ -57,6 +75,16 @@
           <!-- <img src="" alt=""> -->
           <img src="assets/imgs/wip.png" alt="">
           <div class="card-content">
+            <div class="arrow-container">
+              <div class="arrow">
+                <div class="arrow-color"></div>
+              </div>
+            </div>
+            <div class="arrow-container">
+              <div class="arrow">
+                <div class="arrow-color"></div>
+              </div>
+            </div>
             <h3>Works in Progress</h3>
             <p>Works in Progress is a virtual dance and Pilates studio. Members can sign up for various classes hosted on the site, or tune in for weekly live classes.</p>
             <div class="techs">
@@ -72,10 +100,20 @@
           </div>
         </div>
       </div>
-      <!-- <div class="card">
+      <div class="card">
         <div class="card-container">
           <img src="assets/imgs/CrazyboneScreenshot.png" alt="" class="zoomx2">
           <div class="card-content">
+            <div class="arrow-container">
+              <div class="arrow">
+                <div class="arrow-color"></div>
+              </div>
+            </div>
+            <div class="arrow-container">
+              <div class="arrow">
+                <div class="arrow-color"></div>
+              </div>
+            </div>
             <h3>Crazy Bones</h3>
             <p>Crazy Bones is a fun project I worked on for General Assembly's Software Engineering Immersive.  Trade and battle your Crazy Bones with friends. Try to collect them all!</p>
             <div class="techs">
@@ -94,6 +132,16 @@
         <div class="card-container">
           <img src="assets/imgs/racer-game.png" alt="">
           <div class="card-content">
+            <div class="arrow-container">
+              <div class="arrow">
+                <div class="arrow-color"></div>
+              </div>
+            </div>
+            <div class="arrow-container">
+              <div class="arrow">
+                <div class="arrow-color"></div>
+              </div>
+            </div>
             <h3>Cartoon Car Game</h3>
             <p>This is a little game I put together in Unity.  All the assets were created by me in blender. Attempt to drive your cute car around the track in the fastest time possible!</p>
             <div class="techs">
@@ -112,6 +160,16 @@
         <div class="card-container">
           <img src="assets/imgs/buoy-02.gif" alt="" class="zoom-out">
           <div class="card-content">
+            <div class="arrow-container">
+              <div class="arrow">
+                <div class="arrow-color"></div>
+              </div>
+            </div>
+            <div class="arrow-container">
+              <div class="arrow">
+                <div class="arrow-color"></div>
+              </div>
+            </div>
             <h3>BattleShip</h3>
             <p>This is my version of the Hasbro board game Battleship. Mobile friendly, with a computer that fires back smartly to give you a run for your money!</p>
             <div class="techs">
@@ -126,18 +184,21 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div> 
       </div>
     </main>
     <section id="contact">
       <h4>Let's Connect!</h4>
       <p>Please feel free to connect with me here:</p>
-      <ul></ul>
-      <a href="mailto:hello@timrobillard.ca?subject=FROM timrobillard.ca" target="_blank">Email me!</a>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/tim-robillard/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="mailto:hello@timrobillard.ca?subject=FROM timrobillard.ca" target="_blank" class="email">Email me!</a></li>
+        <li><a href="https://github.com/Albatrooss" target="_blank"><i class="fab fa-github-square"></i></a></li>
+      </ul>
     </section>
     <footer>
       <img src="assets/logos/Albatrooss-logo-white.png" alt="">
-      Tim Robillard 2020
+      <p>Tim Robillard 2020</p>
     </footer>
   </body>
   </html>

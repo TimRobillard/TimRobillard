@@ -1,4 +1,3 @@
-
 // ================================================================================================
 //            DOM ELEMENTS
 // ================================================================================================
@@ -8,6 +7,9 @@ const navBar = document.querySelector('header');
 
 const burger = document.getElementById('burger');
 const burgerHRs = document.querySelectorAll('#burger > hr');
+
+const menu = document.getElementById('menu');
+const menuSections = document.querySelectorAll('#menu ul li a');
 
 
 // ================================================================================================
@@ -19,6 +21,8 @@ document.addEventListener('scroll', checkScroll);
 
 burger.addEventListener('click', toggleMenu);
 burgerHRs.forEach(el => el.addEventListener('click', toggleMenu))
+
+menuSections.forEach(section => section.addEventListener('click', toggleMenu));
 
 // ================================================================================================
 //            FUNCTIONS
@@ -44,26 +48,33 @@ function highlightNavSection(i) {
 
 function checkScroll() {
   let scroll = document.getScroll()[1];
-  console.log(scroll);
   if (scroll < 10) {
-    navBar.classList.remove('not-top')
+    navBar.classList.remove('not-top');
+    burger.classList.remove('not-top');
   } else {
     navBar.classList.add('not-top');
+    burger.classList.add('not-top');
+    if (scroll > 1300) {
+      highlightNavSection(2);
+    } else if (scroll > 600) {
+      highlightNavSection(1)
+    } else {
+      highlightNavSection(0);
+    }
   }
 }
 
 let double = false;
 
 function toggleMenu(e) {
-  e.preventDefault();
   if (double) {
     double = false;
     return;
   }
   double = true;
   burger.className = burger.className === 'menu-showing' ? '' : 'menu-showing';
+  menu.classList.toggle('hidden');
 }
 
 highlightNavSection(0);
-
-console.log(burgerHRs);
+console.log(menuSections)
