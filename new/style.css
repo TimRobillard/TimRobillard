@@ -216,6 +216,7 @@ section#home {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 section#home h1,
@@ -755,7 +756,7 @@ footer img {
     color: #af20af;
     background-color: yellow;
   }
-  header #burger {
+  #burger {
     display: none;
   }
   section#home span {
@@ -788,6 +789,9 @@ footer img {
   }
   section#home .logos .img-container img#unity {
     width: 10vw;
+  }
+  #about img {
+    width: 25%;
   }
   #portfolio .card {
     height: 350px;

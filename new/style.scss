@@ -213,6 +213,7 @@ section#home {
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     h1,
     span {
@@ -634,9 +635,9 @@ footer {
             }
         }
 
-        #burger {
-            display: none;
-        }
+    }
+    #burger {
+        display: none;
     }
 
     section#home {
@@ -675,6 +676,12 @@ footer {
                 }
             }
 
+        }
+    }
+
+    #about {
+        img {
+            width: 25%;
         }
     }
 
