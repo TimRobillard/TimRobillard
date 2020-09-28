@@ -249,6 +249,7 @@ section#home {
             height: 10vw;
             width: 10vw;
             margin-bottom: 20px;
+            padding: 10%;
             background-color: $white;
             border-radius: 5px;
             overflow: hidden;
@@ -256,15 +257,10 @@ section#home {
             
             img {
                 border-radius: 5px;
-                width: 10vw;
+                width: 80%;
 
                 &#unity {
-                    width: 20vw;
-                }
-
-                &#ps,
-                &#node {
-                    width: 110%;
+                    width: 150%;
                 }
             }
 
@@ -348,7 +344,7 @@ section#home {
     h2 {
         text-align: center;
         font-size: 4em;
-        transform: perspective(10px) rotateX(1deg)
+        color: #333;
     }
 
     .portfolio-container {
@@ -448,6 +444,7 @@ section#home {
     
             p {
                 margin: 20px;
+                padding: 15px;
                 font-size: 1.2em;
                 flex: 1;
                 background-color: $white;
@@ -673,14 +670,8 @@ footer {
                 height: 5vw;
                 width: 5vw;
                 margin-bottom: 20px;
+                padding: 10%;
 
-                img {
-                    width: 5vw;
-
-                    &#unity {
-                        width: 10vw;
-                    }
-                }
             }
 
         }
