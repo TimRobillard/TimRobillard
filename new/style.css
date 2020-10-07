@@ -32,7 +32,7 @@ body {
 header {
   width: 100vw;
   height: 80px;
-  background-color: #af20af;
+  background-color: #e069e0;
   position: fixed;
   z-index: 10;
   display: -webkit-box;
@@ -97,22 +97,22 @@ header.not-top li a {
 }
 
 header.not-top li.current, header.not-top li:hover {
-  border-bottom: 4px solid #af20af;
+  border-bottom: 4px solid #e069e0;
 }
 
 header.not-top .contact-container a {
   color: #333;
   background-color: #f2f2f2;
-  border: 4px solid #af20af;
+  border: 4px solid #e069e0;
 }
 
 header.not-top .contact-container a:hover {
-  background-color: #af20af;
+  background-color: #e069e0;
   color: #f2f2f2;
 }
 
 header.not-top #burger hr {
-  background-color: #af20af;
+  background-color: #e069e0;
 }
 
 header.not-top.menu-showing {
@@ -180,7 +180,7 @@ header.not-top.menu-showing #burger hr {
 }
 
 #burger.not-top hr {
-  background-color: #af20af;
+  background-color: #e069e0;
 }
 
 #burger.menu-showing {
@@ -210,7 +210,7 @@ header.not-top.menu-showing #burger hr {
 }
 
 section#home {
-  background-color: #af20af;
+  background-color: #e069e0;
   height: 90vh;
   width: 100%;
   position: relative;
@@ -392,7 +392,7 @@ section#home .logos .img-container img#unity {
 }
 
 #portfolio .card {
-  height: 60vh;
+  height: 80vw;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -453,12 +453,15 @@ section#home .logos .img-container img#unity {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateY(250px);
-          transform: translateY(250px);
-  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translateY(85%);
+          transform: translateY(85%);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
   -webkit-transition: -webkit-transform 500ms ease-in-out;
@@ -485,7 +488,7 @@ section#home .logos .img-container img#unity {
 }
 
 #portfolio .card-container .card-content .arrow-container .arrow {
-  background-color: #af20af;
+  background-color: #e069e0;
   width: 15px;
   height: 15px;
   -webkit-clip-path: polygon(50% 0, 100% 50%, 100% 100%, 50% 61%, 0 100%, 0 50%);
@@ -502,21 +505,21 @@ section#home .logos .img-container img#unity {
 }
 
 #portfolio .card-container .card-content h3 {
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
-  margin-bottom: 15px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: white;
 }
 
 #portfolio .card-container .card-content p {
-  margin: 20px;
-  padding: 15px;
-  font-size: 1.2em;
+  margin: 0 10px 10px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 15px;
+  font-size: .8em;
+  flex: 1;
   background-color: #f2f2f2;
 }
 
@@ -533,11 +536,9 @@ section#home .logos .img-container img#unity {
 }
 
 #portfolio .card-container .card-content .techs .img-container {
-  width: 30px;
-  height: 30px;
   background-color: #f2f2f2;
-  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 25px;
+  width: 25px;
   border-radius: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -551,7 +552,7 @@ section#home .logos .img-container img#unity {
 }
 
 #portfolio .card-container .card-content .techs .img-container img {
-  width: 30px;
+  width: 20px;
 }
 
 #portfolio .card-container .card-content .card-btns {
@@ -570,8 +571,8 @@ section#home .logos .img-container img#unity {
 }
 
 #portfolio .card-container .card-content .card-btns .btn {
-  width: 140px;
-  height: 50px;
+  width: 100px;
+  height: 40px;
   margin: 20px;
   border: none;
   background-color: purple;
@@ -597,10 +598,6 @@ section#home .logos .img-container img#unity {
 #portfolio .card-container .card-content .card-btns .btn:hover {
   background-color: #f2f2f2;
   color: purple;
-  cursor: pointer;
-}
-
-#portfolio .card-container:hover {
   cursor: pointer;
 }
 
@@ -631,7 +628,7 @@ section#home .logos .img-container img#unity {
 #contact h4 {
   font-size: 3em;
   text-align: center;
-  color: #af20af;
+  color: #e069e0;
 }
 
 #contact p {
@@ -686,18 +683,18 @@ section#home .logos .img-container img#unity {
 }
 
 #contact ul a.email {
-  background-color: #af20af;
+  background-color: #e069e0;
   color: #f2f2f2;
-  border: 3px solid #af20af;
+  border: 3px solid #e069e0;
 }
 
 #contact ul a.email:hover {
   background-color: #f2f2f2;
-  color: #af20af;
+  color: #e069e0;
 }
 
 footer {
-  background-color: #af20af;
+  background-color: #e069e0;
   color: #f2f2f2;
   text-align: center;
   padding: 10px;
@@ -755,12 +752,12 @@ footer img {
     font-size: 1.8em;
     color: #f2f2f2;
     text-decoration: none;
-    background-color: #af20af;
+    background-color: #e069e0;
     -webkit-transition: background-color 250ms linear, color 250ms linear;
     transition: background-color 250ms linear, color 250ms linear;
   }
   header .contact-container a:hover {
-    color: #af20af;
+    color: #e069e0;
     background-color: yellow;
   }
   #burger {
@@ -828,20 +825,46 @@ footer img {
     margin: 30px;
   }
   #portfolio .card {
-    height: 350px;
+    height: 400px;
     -ms-flex-preferred-size: 500px;
         flex-basis: 500px;
   }
   #portfolio .card .card-container {
-    width: 400px;
-    height: 300px;
+    width: 450px;
+    height: 350px;
   }
   #portfolio .card .card-container .arrow-container {
     display: none;
   }
+  #portfolio .card .card-container .card-content h3 {
+    font-size: 40px;
+  }
+  #portfolio .card .card-container .card-content p {
+    font-size: 1.3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #portfolio .card .card-container .card-content .techs .img-container {
+    height: 35px;
+    width: 35px;
+  }
+  #portfolio .card .card-container .card-content .techs .img-container img {
+    width: 30px;
+  }
+  #portfolio .card .card-container .card-content .card-btns .btn {
+    width: 150px;
+    height: 50px;
+  }
   #portfolio .card .card-container:hover {
-    width: 420px;
-    height: 320px;
+    width: 500px;
+    height: 400px;
   }
   #contact ul {
     -webkit-box-pack: center;
