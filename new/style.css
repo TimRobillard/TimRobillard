@@ -228,7 +228,7 @@ section#home h1,
 section#home span {
   font-size: 5em;
   display: block;
-  color: #f2f2f2;
+  color: #f0f02b;
   position: relative;
   font-weight: bolder;
   text-align: center;
@@ -247,6 +247,7 @@ section#home span {
 }
 
 section#home .logos {
+  padding: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[5];
@@ -258,32 +259,8 @@ section#home .logos {
       flex-wrap: wrap;
 }
 
-section#home .logos .img-container {
-  height: 10vw;
-  width: 10vw;
-  margin-bottom: 20px;
-  padding: 10%;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-section#home .logos .img-container img {
-  border-radius: 5px;
+section#home .logos img {
   width: 80%;
-}
-
-section#home .logos .img-container img#unity {
-  width: 150%;
 }
 
 #menu {
@@ -520,7 +497,7 @@ section#home .logos .img-container img#unity {
   padding: 15px;
   font-size: .8em;
   flex: 1;
-  background-color: #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 #portfolio .card-container .card-content .techs {
@@ -535,24 +512,10 @@ section#home .logos .img-container img#unity {
   width: 80%;
 }
 
-#portfolio .card-container .card-content .techs .img-container {
-  background-color: #f2f2f2;
-  height: 25px;
-  width: 25px;
-  border-radius: 2px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#portfolio .card-container .card-content .techs .img-container img {
-  width: 20px;
+#portfolio .card-container .card-content .techs img {
+  position: relative;
+  width: 50px;
+  display: block;
 }
 
 #portfolio .card-container .card-content .card-btns {
@@ -575,7 +538,7 @@ section#home .logos .img-container img#unity {
   height: 40px;
   margin: 20px;
   border: none;
-  background-color: purple;
+  background-color: #e069e0;
   border-radius: 4px;
   color: #f2f2f2;
   text-decoration: none;
@@ -732,7 +695,7 @@ footer img {
     margin: 5%;
   }
   header nav li.current, header nav li:hover {
-    border-bottom: 4px solid yellow;
+    border-bottom: 4px solid #f0f02b;
   }
   header nav a {
     color: #f2f2f2;
@@ -747,7 +710,7 @@ footer img {
     padding: 20px;
   }
   header .contact-container a {
-    border: 3px solid yellow;
+    border: 3px solid #f0f02b;
     padding: 10px 20px;
     font-size: 1.8em;
     color: #f2f2f2;
@@ -758,7 +721,7 @@ footer img {
   }
   header .contact-container a:hover {
     color: #e069e0;
-    background-color: yellow;
+    background-color: #f0f02b;
   }
   #burger {
     display: none;
@@ -851,11 +814,7 @@ footer img {
         -ms-flex-align: center;
             align-items: center;
   }
-  #portfolio .card .card-container .card-content .techs .img-container {
-    height: 35px;
-    width: 35px;
-  }
-  #portfolio .card .card-container .card-content .techs .img-container img {
+  #portfolio .card .card-container .card-content .techs img {
     width: 30px;
   }
   #portfolio .card .card-container .card-content .card-btns .btn {

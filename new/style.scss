@@ -11,6 +11,7 @@
 
 $purple: rgb(224, 105, 224);
 $white: #f2f2f2;
+$yellow: rgb(240, 240, 43);
 
 *, *::before, *::after {
 margin: 0;
@@ -223,7 +224,7 @@ section#home {
     span {
         font-size: 5em;
         display: block;
-        color: $white;
+        color: $yellow;
         position: relative;
         font-weight: bolder;
         text-align: center;
@@ -240,30 +241,14 @@ section#home {
     }
 
     .logos {
+        padding: 20px;
         display: grid;
         grid-template-columns: repeat(5, auto);
         justify-content: space-evenly;
         flex-wrap: wrap;
         
-        .img-container {
-            height: 10vw;
-            width: 10vw;
-            margin-bottom: 20px;
-            padding: 10%;
-            background-color: $white;
-            border-radius: 5px;
-            overflow: hidden;
-            @include flex-center();
-            
-            img {
-                border-radius: 5px;
-                width: 80%;
-
-                &#unity {
-                    width: 150%;
-                }
-            }
-
+        img {
+            width: 80%;
         }
     }
 }
@@ -450,7 +435,7 @@ section#home {
                 padding: 15px;
                 font-size: .8em;
                 flex: 1;
-                background-color: $white;
+                background-color: rgba(255,255,255, .7);
     
             }
     
@@ -459,19 +444,12 @@ section#home {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 width: 80%;
-    
-                .img-container {
-                    background-color: $white;
-                    height: 25px;
-                    width: 25px;
-                    // box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                    border-radius: 2px;
-    
-                    @include flex-center();
-    
-                    img {
-                        width: 20px;
-                    }
+                
+
+                img {
+                    position: relative;
+                    width: 50px;
+                    display: block;
                 }
             }
     
@@ -484,7 +462,7 @@ section#home {
                     height: 40px;
                     margin: 20px;
                     border: none;
-                    background-color: purple;
+                    background-color: $purple;
                     border-radius: 4px;
                     color: $white;
                     text-decoration: none;
@@ -609,7 +587,7 @@ footer {
 
                 &.current,
                 &:hover {
-                    border-bottom: 4px solid yellow;
+                    border-bottom: 4px solid rgb(240, 240, 43);
                 }
             }
             
@@ -625,7 +603,7 @@ footer {
             padding: 20px;
 
             a {
-                border: 3px solid yellow;
+                border: 3px solid $yellow;
                 padding: 10px 20px;
                 font-size: 1.8em;
                 color: $white;
@@ -636,7 +614,7 @@ footer {
 
                 &:hover {
                     color: $purple;
-                    background-color: yellow;
+                    background-color: $yellow;
                 }
             }
         }
@@ -721,15 +699,10 @@ footer {
                     }
 
                     .techs {
-                        
-                        .img-container {
-                            height: 35px;
-                            width: 35px;
-
-                            img {
-                                width: 30px;
-                            }
+                        img {
+                            width: 30px;
                         }
+                        
                     }
 
                     .card-btns {
