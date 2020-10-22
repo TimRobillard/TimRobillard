@@ -241,14 +241,13 @@ section#home {
     }
 
     .logos {
-        padding: 20px;
+        width: 100vw;
         display: grid;
-        grid-template-columns: repeat(5, auto);
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(5, 1fr);
         
         img {
-            width: 80%;
+            width: 60%;
+            margin: 20px;
         }
     }
 }
@@ -631,12 +630,16 @@ footer {
             position: absolute;
             bottom: -7vw;
             left: 0;
+            width: 100%;
+            text-align: center;
             transform: rotate(0);
         }
 
         h1 {
             text-align: left;
-            font-size: 20vw;
+            font-size: 18vw;
+            margin-top: auto;
+            margin-bottom: 11vw;
         }
 
         .logos {
@@ -646,12 +649,8 @@ footer {
             right: 0;
             top: 15vh;
 
-            .img-container {
-                height: 5vw;
-                width: 5vw;
-                margin-bottom: 20px;
-                padding: 10%;
-
+            img {
+                width: 40%;
             }
 
         }

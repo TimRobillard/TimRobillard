@@ -247,20 +247,16 @@ section#home span {
 }
 
 section#home .logos {
-  padding: 20px;
+  width: 100vw;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[5];
-      grid-template-columns: repeat(5, auto);
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
 }
 
 section#home .logos img {
-  width: 80%;
+  width: 60%;
+  margin: 20px;
 }
 
 #menu {
@@ -732,12 +728,16 @@ footer img {
     position: absolute;
     bottom: -7vw;
     left: 0;
+    width: 100%;
+    text-align: center;
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
   section#home h1 {
     text-align: left;
-    font-size: 20vw;
+    font-size: 18vw;
+    margin-top: auto;
+    margin-bottom: 11vw;
   }
   section#home .logos {
     position: absolute;
@@ -746,11 +746,8 @@ footer img {
     right: 0;
     top: 15vh;
   }
-  section#home .logos .img-container {
-    height: 5vw;
-    width: 5vw;
-    margin-bottom: 20px;
-    padding: 10%;
+  section#home .logos img {
+    width: 40%;
   }
   #about {
     display: -webkit-box;
