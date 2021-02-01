@@ -150,12 +150,14 @@
 
 .portfolio__logo {
   width: 100%;
+  height: 100%;
 }
 
 .portfolio__logo.wip {
   background-color: #4040d4;
   padding: 20px;
   margin: 2rem 0;
+  max-height: 150px;
 }
 
 .portfolio__logo.wip.sm {
@@ -178,7 +180,7 @@
 }
 
 .portfolio__logo.bs {
-  width: auto;
+  max-width: 100px;
   max-height: 100px;
   background-color: #3DA5D9;
   border-radius: 50%;
