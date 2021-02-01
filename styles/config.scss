@@ -1,0 +1,17 @@
+$primary: #EEB058;
+$secondary: #475B5A;
+$third: #3DA5D9;
+$splash: #D3FCD5;
+
+$red: rgb(228, 67, 67);
+
+$white: #f2f2f2f2;
+$black: #333333;
+
+$popp: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
