@@ -89,7 +89,7 @@
 }
 
 .portfolio__outter {
-  height: 500%;
+  height: 600%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,14 +150,32 @@
 
 .portfolio__logo {
   width: 100%;
-  height: 100%;
+}
+
+.portfolio__logo--inner.kb {
+  border: 2px solid #f2f2f2f2;
+  border-radius: 5px;
+  width: 75%;
+}
+
+.portfolio__logo--inner.poke {
+  border: 2px solid red;
+  width: 70%;
+  background-color: #f2f2f2f2;
+}
+
+.portfolio__logo--inner.bs {
+  width: 50%;
+  background-color: #3DA5D9;
+  border-radius: 50%;
+  border: 2px solid #f2f2f2f2;
+  padding: 10px 0 10px 12px;
 }
 
 .portfolio__logo.wip {
   background-color: #4040d4;
   padding: 20px;
   margin: 2rem 0;
-  max-height: 150px;
 }
 
 .portfolio__logo.wip.sm {
@@ -166,26 +184,6 @@
 
 .portfolio__logo.wip.lg {
   display: none;
-}
-
-.portfolio__logo.poke {
-  border: 2px solid red;
-  width: 70%;
-}
-
-.portfolio__logo.kb {
-  border: 2px solid #f2f2f2f2;
-  border-radius: 5px;
-  width: 75%;
-}
-
-.portfolio__logo.bs {
-  max-width: 100px;
-  max-height: 100px;
-  background-color: #3DA5D9;
-  border-radius: 50%;
-  border: 2px solid #f2f2f2f2;
-  padding: 10px 0 10px 12px;
 }
 
 .portfolio__logo--wrapper {
@@ -222,6 +220,7 @@
 .portfolio__p {
   color: #475B5A;
   text-align: center;
+  font-size: 1.4rem;
 }
 
 .portfolio__logos {
@@ -317,7 +316,7 @@
   display: none;
 }
 
-@media only screen and (min-height: 678px) {
+@media only screen and (min-height: 760px) {
   .portfolio {
     height: 100vh;
     padding-top: 100px;
@@ -334,7 +333,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 500%;
+    width: 600%;
     height: 100%;
   }
   .portfolio__outter {
@@ -363,16 +362,14 @@
   .portfolio__title {
     font-size: 3rem;
   }
+  .portfolio__logo {
+    height: auto;
+  }
   .portfolio__logo.wip.sm {
     display: none;
   }
   .portfolio__logo.wip.lg {
     display: block;
-  }
-  .portfolio__logo.bs {
-    max-height: 400px;
-    padding-left: 55px;
-    border: 4px solid #f2f2f2f2;
   }
   .portfolio__logo.kb {
     border: 4px solid #f2f2f2f2;
@@ -398,6 +395,9 @@
   }
   .portfolio__logo--wrapper.bs {
     width: 100%;
+  }
+  .portfolio__logo--inner .pacman {
+    border: 4px solid #f2f2f2f2;
   }
   .portfolio__img-p {
     -webkit-box-flex: 1;
@@ -990,18 +990,12 @@ section {
   }
   .about__headshot {
     width: 70%;
-    margin-left: auto;
+    margin-left: 30%;
   }
   .about__headshot--wrapper {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
   }
   .about__text {
     padding: 0 5%;

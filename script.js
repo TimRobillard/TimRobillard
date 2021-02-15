@@ -66,7 +66,6 @@ let vert = true;
 
 //PORTFOLIO
 let portfolioIdx = 0;
-let portfolioIdxMax = 4;
 
 // ================================================================================
 //          FUNCTIONS
@@ -136,7 +135,7 @@ function changePortfolio(e) {
 
 function horizontalPortfolio(dir=1) {
   if (dir === 1 && portfolioIdx === 0) return;
-  if (dir === -1 && portfolioIdx === portfolioIdxMax) return;
+  if (dir === -1 && portfolioIdx === portfolioNavItems.length-1) return;
   portfolioIdx += -dir;
   portfolioWrapper.style.left = `-${100*portfolioIdx}%`;
 }

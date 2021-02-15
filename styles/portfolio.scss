@@ -74,7 +74,7 @@
     }
     
     &__outter {
-        height: 500%;
+        height: 600%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -112,15 +112,34 @@
 
     &__logo {
         width: 100%;
-        height: 100%;
         // margin-bottom: 2rem;
+
+        &--inner {
+            &.kb {
+                border: 2px solid $white;
+                border-radius: 5px;
+                width: 75%;
+            }
+
+            &.poke {
+                border: 2px solid red;
+                width: 70%;
+                background-color: $white;
+            }
+
+            &.bs {
+                width: 50%;
+                background-color: $third;
+                border-radius: 50%;
+                border: 2px solid $white;
+                padding: 10px 0 10px 12px;
+            }
+        }
         
         &.wip {
             background-color: #4040d4;
             padding: 20px;
             margin: 2rem 0;
-
-            max-height: 150px;
 
             &.sm {
                 display: block;
@@ -129,26 +148,9 @@
                 display: none;
             }
         }
-
-        &.poke {
-            border: 2px solid red;
-            width: 70%;
-        }
         
-        &.kb {
-            border: 2px solid $white;
-            border-radius: 5px;
-            width: 75%;
-        }
         
-        &.bs {
-            max-width: 100px;
-            max-height: 100px;
-            background-color: $third;
-            border-radius: 50%;
-            border: 2px solid $white;
-            padding: 10px 0 10px 12px;
-        }
+        
         &--wrapper {
             width: 90%;
             margin: 0 auto;
@@ -171,6 +173,7 @@
     &__p {
         color: $secondary;
         text-align: center;
+        font-size: 1.4rem;
     }
 
     &__logos {
@@ -253,7 +256,7 @@
     }
 }
 
-@media only screen and (min-height: 678px) {
+@media only screen and (min-height: 760px) {
     .portfolio {
         height: 100vh;
         padding-top: 100px;
@@ -272,7 +275,7 @@
         
         &__wrapper {
             flex-direction: row;
-            width: 500%;
+            width: 600%;
             height: 100%;
         }
 
@@ -298,6 +301,7 @@
         }
 
         &__logo {
+            height: auto;
 
             &.wip {
                 &.sm {
@@ -308,11 +312,11 @@
                 }
             }
             
-            &.bs{
-                max-height: 400px;
-                padding-left: 55px;
-                border: 4px solid $white;
-            }
+            // &.bs{
+            //     max-height: 400px;
+            //     padding-left: 55px;
+            //     border: 4px solid $white;
+            // }
 
             &.kb {
                 border: 4px solid $white;
@@ -331,6 +335,13 @@
                 }
                 &.bs {
                     width: 100%;
+                }
+            }
+            &--inner {
+                // width: 70%;
+
+                .pacman {
+                    border: 4px solid $white;
                 }
             }
         }

@@ -40,7 +40,9 @@
   </section>
   <section class="about" id="about">
     <div class="about__headshot--wrapper">
-      <img src="images/BnW-headshot.jpg" alt="" class="about__headshot">
+      <div>
+        <img src="images/BnW-headshot.jpg" alt="" class="about__headshot">
+      </div>
     </div>
     <div class="about__text">
       <h3 class="about__title">Software Engineer</h3>
@@ -54,18 +56,42 @@
   <section class="portfolio" id="portfolio">
     <nav class="portfolio__nav">
       <ul class="portfolio__nav__list">
-        <li class="portfolio__nav__item portfolio__nav__item--active" data-index="0">WIP</li>
-        <li class="portfolio__nav__item" data-index="1">Po</li>
-        <li class="portfolio__nav__item" data-index="2">KB</li>
-        <li class="portfolio__nav__item" data-index="3">CB</li>
+        <li class="portfolio__nav__item portfolio__nav__item--active" data-index="0">PF</li>
+        <li class="portfolio__nav__item" data-index="1">WIP</li>
+        <li class="portfolio__nav__item" data-index="2">Po</li>
+        <li class="portfolio__nav__item" data-index="3">KB</li>
+        <li class="portfolio__nav__item" data-index="4">CB</li>
         <!-- <li class="portfolio__nav__item" data-index="4">CG</li> -->
-        <li class="portfolio__nav__item" data-index="4">BS</li>
+        <li class="portfolio__nav__item" data-index="5">BS</li>
         <!-- <li class="portfolio__nav__item">Item 6</li> -->
       </ul>
     </nav>
     <div class="portfolio__main">
       <div class="portfolio__wrapper">
         <div class="portfolio__outter">
+          <!-- Pathfinder -->
+          <div class="portfolio__inner">
+            <h2 class="portfolio__title">Pacman Pathfinder</h2>
+            <div class="portfolio__inner--wrapper">
+              <div class="portfolio__logo--wrapper pacman">
+                <div class="portfolio__logo--inner pacman">
+                  <img class="portfolio__logo pacman" src="images/pacman02.png" alt="works_in_progress_logo">
+                </div>
+              </div>
+              <div class="portfolio__img-p">
+                <p class="portfolio__p">Help Pacman get to the cherries!<br/>Build any path, and use either Dijkstra's algorithm or the A* algorithm to find the shortest path to the cherries.</p>
+                <ul class="portfolio__logos">
+                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/react.svg" alt="react-logo" class="portfolio__logos__img"></li>
+                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/node.svg" alt="node-logo" class="portfolio__logos__img"></li>
+                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/mongoDB.svg" alt="node-logo" class="portfolio__logos__img"></li>
+                </ul>
+                <div class="portfolio__buttons">
+                  <div class="portfolio__buttons__left"><a href="https://github.com/Albatrooss/pathfinder2.0" target="_blank">VIEW CODE</a></div>
+                  <div class="portfolio__buttons__right"><a href="https://albatrooss.github.io/pathfinder2.0/" target="_blank">VIEW SITE</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="portfolio__inner">
             <h2 class="portfolio__title">Works in Progress</h2>
             <div class="portfolio__inner--wrapper">
@@ -169,7 +195,9 @@
             <h2 class="portfolio__title">BattleShip</h2>
             <div class="portfolio__inner--wrapper">
               <div class="portfolio__logo--wrapper bs">
-                <img src="/images/buoy-02.gif" alt="buoy" class="portfolio__logo bs">
+                <div class="portfolio__logo--inner bs">
+                  <img src="/images/buoy-02.gif" alt="buoy" class="portfolio__logo bs">
+                </div>
               </div>
               <div class="portfolio__img-p">
                 <p class="portfolio__p">This is my version of the Hasbro board game Battleship. Mobile friendly, with a computer that fires back smartly to give you a run for your money!</p>
