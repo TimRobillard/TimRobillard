@@ -1,234 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/favicon.ico" />
   <title>Tim Robillard</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="styles/style.css">
   <script defer src="script.js"></script>
 </head>
-<body>
-  <header class="header">
-      <input type="checkbox" class="menu__check" id="burger">
-      <label for="burger" class="menu__label"><span class="menu__burger"></span></label>
-    <nav class="header__nav">
-    <a href="/"><img src="images/albatroos_logo01.svg" alt="albatrooss_logo" class="header__logo"></a>
-      <ul class="header__list">
-        <li class="header__item  header__item--active"><a href="#home" class="header__link">HOME</a></li>
-        <li class="header__item"><a href="#about" class="header__link">ABOUT</a></li>
-        <li class="header__item"><a href="#portfolio" class="header__link">PORTFOLIO</a></li>
-        <!-- <li class="header__item"><a href="#fun" class="header__link">FUN</a></li> -->
-        <li class="header__item"><a href="#contact" class="header__link">CONTACT</a></li>
-      </ul>
 
-    </nav>
-  </header>
-  <section class="home" id="home">
-    <div class="home__title">
-      <!-- <div class="test"></div> -->
-      <h1 class="home__tim">Tim</h1>
-      <h2 class="home__robillard">Robillard</h2>
-      <h2 class="home__software">SOFTWARE <span class='home__software--dash'>|</span> <span>DESIGN</span></h2>
-      <div class="home__logos">
-        <div class="home__logos__inner">
-          <div class="home__logos__front"></div>
-          <div class="home__logos__back"></div>
+<body>
+  <section class="landing">
+    <div class="content">
+      <h2 class="tim">Tim<div class="logos">
+          <div class="logo-inner">
+            <div class="logo-front"></div>
+            <div class="logo-back"></div>
+          </div>
         </div>
-      </div>
+      </h2>
+      <h2>Robillard</h2>
+      <h3><span>Software</span> <span>|</span> <span>Design</span></h3>
     </div>
   </section>
   <section class="about" id="about">
-    <div class="about__headshot--wrapper">
-      <div>
-        <img src="images/BnW-headshot.jpg" alt="" class="about__headshot">
+    <div class="content">
+      <div class="headshot">
+        <img src="images/BnW-headshot.jpg">
       </div>
-    </div>
-    <div class="about__text">
-      <h3 class="about__title">Software Engineer</h3>
-      <p class="about__desc">Willing to go above and beyond to give you exactly what you need, when you need it.</p>
-      <a class="about__link" href="#">
-        DROP ME A LINE!
-      </a>
-      </a>
+      <h2>Full Stack Developer</h2>
+      <p>Crafting Innovative Solutions for Seamless User Experiences</p>
+      <h4>Connect with me!</h4>
+      <ul>
+        <li><a href="https://github.com/TimRobillard" target="_blank"><img
+              src="assets/logos/github-mark/github-mark.svg" alt="" srcset=""></a></li>
+        <li><a href="https://www.linkedin.com/in/tim-robillard/" target="_blank"><img
+              src="assets/logos/LinkedIn-Logos/LI-In-Bug.png" alt="" srcset=""></a></li>
+        <li><a href="mailto:hello@timrobillard.ca" target="_blank"><span class="material-symbols-outlined">
+              mail
+            </span></a></li>
+      </ul>
     </div>
   </section>
-  <section class="portfolio" id="portfolio">
-    <nav class="portfolio__nav">
-      <ul class="portfolio__nav__list">
-        <li class="portfolio__nav__item portfolio__nav__item--active" data-index="0">PF</li>
-        <li class="portfolio__nav__item" data-index="1">WIP</li>
-        <li class="portfolio__nav__item" data-index="2">Po</li>
-        <li class="portfolio__nav__item" data-index="3">KB</li>
-        <li class="portfolio__nav__item" data-index="4">CB</li>
-        <!-- <li class="portfolio__nav__item" data-index="4">CG</li> -->
-        <li class="portfolio__nav__item" data-index="5">BS</li>
-        <!-- <li class="portfolio__nav__item">Item 6</li> -->
-      </ul>
-    </nav>
-    <div class="portfolio__main">
-      <div class="portfolio__wrapper">
-        <div class="portfolio__outter">
-          <!-- Pathfinder -->
-          <div class="portfolio__inner">
-            <h2 class="portfolio__title">Pacman Pathfinder</h2>
-            <div class="portfolio__inner--wrapper">
-              <div class="portfolio__logo--wrapper pacman">
-                <div class="portfolio__logo--inner pacman">
-                  <img class="portfolio__logo pacman" src="images/pacman02.png" alt="works_in_progress_logo">
-                </div>
-              </div>
-              <div class="portfolio__img-p">
-                <p class="portfolio__p">Help Pacman get to the cherries!<br/><br/>Build any path, and use either Dijkstra's algorithm or the A* algorithm to find the shortest path.</p>
-                <ul class="portfolio__logos">
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/react.svg" alt="react-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/node.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/mongoDB.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                </ul>
-                <div class="portfolio__buttons">
-                  <div class="portfolio__buttons__left"><a href="https://github.com/Albatrooss/pathfinder2.0" target="_blank">VIEW CODE</a></div>
-                  <div class="portfolio__buttons__right"><a href="https://albatrooss.github.io/pathfinder2.0/" target="_blank">VIEW SITE</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio__inner">
-            <h2 class="portfolio__title">Works in Progress</h2>
-            <div class="portfolio__inner--wrapper">
-              <div class="portfolio__logo--wrapper wip">
-                <img class="portfolio__logo wip sm" src="./images/square_banner.svg" alt="works_in_progress_logo">
-                <img class="portfolio__logo wip lg" src="./images/new_logo.svg" alt="works_in_progress_logo">
-              </div>
-              <div class="portfolio__img-p">
-                <p class="portfolio__p">Works in Progress is a virtual dance and Pilates studio. Members can sign up for various classes hosted on the site, or tune in for weekly live classes.</p>
-                <ul class="portfolio__logos">
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/react.svg" alt="react-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/node.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/mongoDB.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                </ul>
-                <div class="portfolio__buttons">
-                  <div class="portfolio__buttons__left"><a href="https://github.com/Albatrooss/works-in-progress" target="_blank">VIEW CODE</a></div>
-                  <div class="portfolio__buttons__right"><a href="https://www.worksinprogressmovement.ca/" target="_blank">VIEW SITE</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio__inner">
-            <h2 class="portfolio__title">Knockdown Bridge</h2>
-            <div class="portfolio__inner--wrapper">
-              <div class="portfolio__logo--wrapper">
-                <img class="portfolio__logo kb" src="./images/Knockdown-pic02.png" alt="Knockdown-pic">
-              </div>
-              <div class="portfolio__img-p">
-                <p class="portfolio__p">This is my version of the classic card game.  With the Pandemic making group card games in person impossible, I decided to make an online version to play with my friends and family over Zoom.</p>
-                <ul class="portfolio__logos">
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/react.svg" alt="react-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/node.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/css.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/firebase-logo.png" alt="node-logo" class="portfolio__logos__img fb"></li>
-                </ul>
-                <div class="portfolio__buttons">
-                  <div class="portfolio__buttons__left"><a href="https://github.com/Albatrooss/knockdown-bridge" target="_blank">VIEW CODE</a></div>
-                  <div class="portfolio__buttons__right"><a href="https://knockdown-bridge.netlify.app/" target="_blank">VIEW SITE</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="portfolio__inner">
-            <h2 class="portfolio__title">Pokedex</h2>
-            <div class="portfolio__inner--wrapper">
-              <div class="portfolio__logo--wrapper poke">
-                <img src="/images/pokemon.png" alt="buoy" class="portfolio__logo poke">
-              </div>
-              <div class="portfolio__img-p">
-                <p class="portfolio__p">This Pokedex was made in about an hour using the Poke api and jQuery. Search to get stats on your favourite Pokemon!</p>
-                <ul class="portfolio__logos">
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/html.svg" alt="react-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/css.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/javascript.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/jQuery.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                </ul>
-                <div class="portfolio__buttons">
-                  <div class="portfolio__buttons__left"><a href="https://github.com/Albatrooss/pokedex" target="_blank">VIEW CODE</a></div>
-                  <div class="portfolio__buttons__right"><a href="https://tims-pokedex.netlify.app/" target="_blank">VIEW SITE</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="portfolio__inner">
-            <h2 class="portfolio__title">CrazyBones</h2>
-            <div class="portfolio__inner--wrapper">
-              <div class="portfolio__logo--wrapper">
-                <img class="portfolio__logo kb" src="./images/crazy_bones.png" alt="Knockdown-pic">
-              </div>
-              <div class="portfolio__img-p">
-                <p class="portfolio__p">Crazy Bones is a fun project I worked on for General Assembly's Software Engineering Immersive.  Trade and battle your Crazy Bones with friends. Try to collect them all!</p>
-                <ul class="portfolio__logos">
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/python.svg" alt="react-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/django.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/postgresql.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                </ul>
-                <div class="portfolio__buttons">
-                  <div class="portfolio__buttons__left"><a href="https://github.com/jpeng11/crazybones" target="_blank">VIEW CODE</a></div>
-                  <div class="portfolio__buttons__right"><a href="http://crazybone.herokuapp.com/" target="_blank">VIEW SITE</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="portfolio__inner">
-            <h2 class="portfolio__title">Car Game</h2>
-            <p class="portfolio__p">Lorem espem Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint suscipit voluptate minima, dignissimos autem vel? Labore, aut! Dolor modi incidunt deleniti laudantium nisi sint adipisci ratione ab velit quo.</p>
-            <ul class="portfolio__logos">
-              <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/unity.svg" alt="react-logo" class="portfolio__logos__img"></li>
-              <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/csharp.svg" alt="node-logo" class="portfolio__logos__img"></li>
-              <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/blender.svg" alt="react-logo" class="portfolio__logos__img"></li>
-            </ul>
-            <div class="portfolio__buttons">
-              <div class="portfolio__buttons__left"><a href="#portfolio" target="_blank">VIEW CODE</a></div>
-              <div class="portfolio__buttons__right"><a href="#portfolio" target="_blank">VIEW SITE</a></div>
-            </div>
-          </div> -->
-          <div class="portfolio__inner">
-            <h2 class="portfolio__title">BattleShip</h2>
-            <div class="portfolio__inner--wrapper">
-              <div class="portfolio__logo--wrapper bs">
-                <div class="portfolio__logo--inner bs">
-                  <img src="/images/buoy-02.gif" alt="buoy" class="portfolio__logo bs">
-                </div>
-              </div>
-              <div class="portfolio__img-p">
-                <p class="portfolio__p">This is my version of the Hasbro board game Battleship. Mobile friendly, with a computer that fires back smartly to give you a run for your money!</p>
-                <ul class="portfolio__logos">
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/javascript.svg" alt="react-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/html.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                  <li class="portfolio__logos__item"><img src="images/icons-new_gry_blue/css.svg" alt="node-logo" class="portfolio__logos__img"></li>
-                </ul>
-                <div class="portfolio__buttons" style="margin-left: 20px">
-                  <div class="portfolio__buttons__left"><a href="https://github.com/Albatrooss/battle-ship" target="_blank">VIEW CODE</a></div>
-                  <div class="portfolio__buttons__right"><a href="https://albatrooss.github.io/battle-ship/" target="_blank">VIEW SITE</a></div>
-                </div>
-              </div>
-            </div>
+  <section class="portfolio">
+    <h2>Selected Works</h2>
+    <div class="content">
+      <div class="card">
+        <div class="image">
+          <img src="https://uploads-ssl.webflow.com/5e32b0ed3ab26ba0b7a288d5/5e3dab7ca7454263b35ef2b1_Opengraph.png"
+            alt="" srcset="">
+        </div>
+        <div class="card-content">
+          <h3>Brokerbay</h3>
+          <h4>B2B Startup</h4>
+          <p>Created an 3rd party integration system from scratch that decreased onboarding time by 75%, and saved on
+            engineering effort.</p>
+          <div class="links">
+            <a target="_blank" href="http://" aria-disabled="true">Code</a>
+            <a target="_blank" href="http://edge.brokerbay.com">Site</a>
           </div>
         </div>
-      </div>  
-    </div>
-    <button id="portfolio__arrow--left" class="portfolio__arrow--left"><i class="fas fa-chevron-left"></i></button>
-    <button id="portfolio__arrow--right" class="portfolio__arrow--right"><i class="fas fa-chevron-right"></i></button>
-  </section>
-  <section class="contact" id="contact">
-    <div class="contact__inner">
-      <ul class="contact__logos">
-        <li><a class="contact__logo" href="https://github.com/albatrooss" target="_blank"><i class="fab fa-github-square"></i></a></li>
-        <li><a class="contact__logo" href="https://www.linkedin.com/in/tim-robillard/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        <li><a class="contact__logo" href="mailto:hello@timrobillard.ca" target="_blank"><i class="fas fa-envelope-square"></i></a></li>
-      </ul>
-      <a href="mailto:hello@timrobillard.ca" target="_blank" class="contact__email">hello@timrobillard.ca</a>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="images/pacman.png" alt="" srcset="">
+        </div>
+        <div class="card-content">
+          <h3>Pacman Pathfinding Visualizer</h3>
+          <h4>Help Pacman get to the cherries!</h4>
+          <p>Build any path, and use either Dijkstra's algorithm or the A*
+            algorithm to find the shortest path.</p>
+          <div class="links">
+            <a target="_blank" href="https://github.com/TimRobillard/pathfinder2.0">Code</a>
+            <a target="_blank" href="https://timrobillard.github.io/pathfinder2.0/">Site</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="images/Knockdown-pic.png" alt="" srcset="">
+        </div>
+        <div class="card-content">
+          <h3>Knockdown Bridge</h3>
+          <h4>Real time multiplayer card game</h4>
+          <p>This is my version of the classic card game. With the Pandemic making group card games in person
+            impossible, I decided to make an online version to play with my friends and family over Zoom.</p>
+          <div class="links">
+            <a target="_blank" href="https://github.com/TimRobillard/knockdown-bridge">Code</a>
+            <a target="_blank" href="https://knockdown.ohohoh.ca/">Site</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="images/battleship.png" alt="" srcset="">
+        </div>
+        <div class="card-content">
+          <h3>Battleship</h3>
+          <h4>Vanilla JS game with smart opponent</h4>
+          <p>This is my version of the Hasbro board game Battleship. Mobile friendly, with a computer that fires back
+            smartly to give you a run for your money!</p>
+          <div class="links">
+            <a target="_blank" href="https://github.com/TimRobillard/battle-ship">Code</a>
+            <a target="_blank" href="https://timrobillard.github.io/battle-ship/">Site</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </body>
+
 </html>
