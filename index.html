@@ -1,120 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" />
+    <title>Tim Robillard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="script.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/favicon.ico" />
-  <title>Tim Robillard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="styles/style.css">
-  <script defer src="script.js"></script>
-</head>
-
-<body>
-  <section class="landing">
-    <div class="content">
-      <h2 class="tim">Tim<div class="logos">
-          <div class="logo-inner">
-            <div class="logo-front"></div>
-            <div class="logo-back"></div>
+  <body>
+    <section class="landing">
+      <div class="content">
+        <h2 class="tim">
+          Tim
+          <div class="logos">
+            <div class="logo-inner">
+              <div class="logo-front"></div>
+              <div class="logo-back"></div>
+            </div>
+          </div>
+        </h2>
+        <h2>Robillard</h2>
+        <h3><span>Software</span> <span>|</span> <span>Design</span></h3>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="content">
+        <div class="headshot">
+          <img src="images/BnW-headshot.jpg" />
+        </div>
+        <h2>Full Stack Developer</h2>
+        <p>Crafting Innovative Solutions for Seamless User Experiences</p>
+        <h4>Connect with me!</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/TimRobillard" target="_blank"
+              ><img
+                src="assets/logos/github-mark/github-mark.svg"
+                alt=""
+                srcset=""
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/tim-robillard/" target="_blank"
+              ><img
+                src="assets/logos/LinkedIn-Logos/LI-In-Bug.png"
+                alt=""
+                srcset=""
+            /></a>
+          </li>
+          <li>
+            <a href="mailto:hello@timrobillard.ca" target="_blank"
+              ><span class="material-symbols-outlined"> mail </span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="portfolio">
+      <h2>Selected Works</h2>
+      <div class="content">
+        <div class="card">
+          <div class="image">
+            <img
+              src="https://uploads-ssl.webflow.com/5e32b0ed3ab26ba0b7a288d5/5e3dab7ca7454263b35ef2b1_Opengraph.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="card-content">
+            <h3>Brokerbay</h3>
+            <h4>B2B Startup</h4>
+            <p>
+              Created an 3rd party integration system from scratch that
+              decreased onboarding time by 75%, and saved on engineering effort.
+            </p>
+            <div class="links">
+              <a target="_blank" href="http://" aria-disabled="true">Code</a>
+              <a target="_blank" href="http://edge.brokerbay.com">Site</a>
+            </div>
           </div>
         </div>
-      </h2>
-      <h2>Robillard</h2>
-      <h3><span>Software</span> <span>|</span> <span>Design</span></h3>
-    </div>
-  </section>
-  <section class="about" id="about">
-    <div class="content">
-      <div class="headshot">
-        <img src="images/BnW-headshot.jpg">
-      </div>
-      <h2>Full Stack Developer</h2>
-      <p>Crafting Innovative Solutions for Seamless User Experiences</p>
-      <h4>Connect with me!</h4>
-      <ul>
-        <li><a href="https://github.com/TimRobillard" target="_blank"><img
-              src="assets/logos/github-mark/github-mark.svg" alt="" srcset=""></a></li>
-        <li><a href="https://www.linkedin.com/in/tim-robillard/" target="_blank"><img
-              src="assets/logos/LinkedIn-Logos/LI-In-Bug.png" alt="" srcset=""></a></li>
-        <li><a href="mailto:hello@timrobillard.ca" target="_blank"><span class="material-symbols-outlined">
-              mail
-            </span></a></li>
-      </ul>
-    </div>
-  </section>
-  <section class="portfolio">
-    <h2>Selected Works</h2>
-    <div class="content">
-      <div class="card">
-        <div class="image">
-          <img src="https://uploads-ssl.webflow.com/5e32b0ed3ab26ba0b7a288d5/5e3dab7ca7454263b35ef2b1_Opengraph.png"
-            alt="" srcset="">
+        <div class="card">
+          <div class="image">
+            <img src="images/pacman.png" alt="" srcset="" />
+          </div>
+          <div class="card-content">
+            <h3>Pacman Pathfinding Visualizer</h3>
+            <h4>Help Pacman get to the cherries!</h4>
+            <p>
+              Build any path, and use either Dijkstra's algorithm or the A*
+              algorithm to find the shortest path.
+            </p>
+            <div class="links">
+              <a
+                target="_blank"
+                href="https://github.com/TimRobillard/pathfinder2.0"
+                >Code</a
+              >
+              <a
+                target="_blank"
+                href="https://timrobillard.github.io/pathfinder2.0/"
+                >Site</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="card-content">
-          <h3>Brokerbay</h3>
-          <h4>B2B Startup</h4>
-          <p>Created an 3rd party integration system from scratch that decreased onboarding time by 75%, and saved on
-            engineering effort.</p>
-          <div class="links">
-            <a target="_blank" href="http://" aria-disabled="true">Code</a>
-            <a target="_blank" href="http://edge.brokerbay.com">Site</a>
+        <div class="card">
+          <div class="image">
+            <img src="images/golf_indx.png" alt="" srcset="" />
+          </div>
+          <div class="card-content">
+            <h3>Golf Indx</h3>
+            <h4>Golf Handicap Index Tracker</h4>
+            <p>
+              Built with Golang and HTMX, this application allows a user to
+              track their golf handicap, and see their progress progress in the
+              dashboard. Login with guest:password.
+            </p>
+            <div class="links">
+              <a
+                target="_blank"
+                href="https://github.com/TimRobillard/golf_indx"
+                >Code</a
+              >
+              <a target="_blank" href="https://golf.ohohoh.ca/">Site</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="images/Knockdown-pic.png" alt="" srcset="" />
+          </div>
+          <div class="card-content">
+            <h3>Knockdown Bridge</h3>
+            <h4>Real time multiplayer card game</h4>
+            <p>
+              This is my version of the classic card game. With the Pandemic
+              making group card games in person impossible, I decided to make an
+              online version to play with my friends and family over Zoom.
+            </p>
+            <div class="links">
+              <a
+                target="_blank"
+                href="https://github.com/TimRobillard/knockdown-bridge"
+                >Code</a
+              >
+              <a target="_blank" href="https://knockdown.ohohoh.ca/">Site</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="images/battleship.png" alt="" srcset="" />
+          </div>
+          <div class="card-content">
+            <h3>Battleship</h3>
+            <h4>Vanilla JS game with smart opponent</h4>
+            <p>
+              This is my version of the Hasbro board game Battleship. Mobile
+              friendly, with a computer that fires back smartly to give you a
+              run for your money!
+            </p>
+            <div class="links">
+              <a
+                target="_blank"
+                href="https://github.com/TimRobillard/battle-ship"
+                >Code</a
+              >
+              <a
+                target="_blank"
+                href="https://timrobillard.github.io/battle-ship/"
+                >Site</a
+              >
+            </div>
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="image">
-          <img src="images/pacman.png" alt="" srcset="">
-        </div>
-        <div class="card-content">
-          <h3>Pacman Pathfinding Visualizer</h3>
-          <h4>Help Pacman get to the cherries!</h4>
-          <p>Build any path, and use either Dijkstra's algorithm or the A*
-            algorithm to find the shortest path.</p>
-          <div class="links">
-            <a target="_blank" href="https://github.com/TimRobillard/pathfinder2.0">Code</a>
-            <a target="_blank" href="https://timrobillard.github.io/pathfinder2.0/">Site</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src="images/Knockdown-pic.png" alt="" srcset="">
-        </div>
-        <div class="card-content">
-          <h3>Knockdown Bridge</h3>
-          <h4>Real time multiplayer card game</h4>
-          <p>This is my version of the classic card game. With the Pandemic making group card games in person
-            impossible, I decided to make an online version to play with my friends and family over Zoom.</p>
-          <div class="links">
-            <a target="_blank" href="https://github.com/TimRobillard/knockdown-bridge">Code</a>
-            <a target="_blank" href="https://knockdown.ohohoh.ca/">Site</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src="images/battleship.png" alt="" srcset="">
-        </div>
-        <div class="card-content">
-          <h3>Battleship</h3>
-          <h4>Vanilla JS game with smart opponent</h4>
-          <p>This is my version of the Hasbro board game Battleship. Mobile friendly, with a computer that fires back
-            smartly to give you a run for your money!</p>
-          <div class="links">
-            <a target="_blank" href="https://github.com/TimRobillard/battle-ship">Code</a>
-            <a target="_blank" href="https://timrobillard.github.io/battle-ship/">Site</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</body>
-
+    </section>
+  </body>
 </html>

@@ -1,309 +1,307 @@
 :root {
-    --primary: #eeb058;
-    --secondary: #475b5a;
-    --third: #3da5d9;
-    --splash: #d3fcd5;
+  --primary: #eeb058;
+  --secondary: #475b5a;
+  --third: #3da5d9;
+  --splash: #d3fcd5;
 
-    --red: rgb(228, 67, 67);
+  --red: rgb(228, 67, 67);
 
-    --white: #f2f2f2f2;
-    --black: #333333;
+  --white: #f2f2f2f2;
+  --black: #333333;
 
-    --pop: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --pop: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--white);
-    width: 100vw;
-    font-family: Poppins, sans-serif;
+  background-color: var(--white);
+  width: 100vw;
+  font-family: Poppins, sans-serif;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section {
-    width: 100%;
-    height: 94vh;
-    padding: 2rem;
+  width: 100%;
+  height: 94vh;
+  padding: 2rem;
 }
 
 .landing {
-    background-color: var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .landing .content {
-    position: relative;
-    margin-top: 7rem;
+  position: relative;
+  margin-top: 7rem;
 }
 
 .landing .content h2 {
-    position: relative;
-    color: var(--secondary);
-    font-size: calc(clamp(3em, 20vw, 7em));
-    line-height: 1em;
+  position: relative;
+  color: var(--secondary);
+  font-size: calc(clamp(3em, 20vw, 7em));
+  line-height: 1em;
 }
 
 .landing .content h2.tim {
-    color: var(--white);
+  color: var(--white);
 }
 
 .landing .content h3 {
-    color: var(--secondary);
-    font-size: calc(clamp(1em, 7vw, 2em));
-    text-align: center;
+  color: var(--secondary);
+  font-size: calc(clamp(1em, 7vw, 2em));
+  text-align: center;
 }
 
 .landing .content h3 span:nth-child(2) {
-    color: var(--white);
+  color: var(--white);
 }
 
 .landing .content h3 span:nth-child(3) {
-    color: var(--third);
+  color: var(--third);
 }
 
 .landing .logos {
-    position: absolute;
-    height: 24vh;
-    width: 24vh;
-    /* background-color: var(--primary); */
-    bottom: 120%;
-    right: 50%;
-    margin-right: -25%;
+  position: absolute;
+  height: 24vh;
+  width: 24vh;
+  /* background-color: var(--primary); */
+  bottom: 120%;
+  right: 50%;
+  margin-right: -25%;
 }
 
 .landing .logo-inner {
-    height: 100%;
-    width: 100%;
-    transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
 }
 
 .landing .logo-front {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .about {
-    background-color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about .content {
-    background-color: var(--white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .about .headshot {
-    height: 80vw;
-    width: 80vw;
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
+  height: 80vw;
+  width: 80vw;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .about .headshot img {
-    width: 100%;
+  width: 100%;
 }
 
 .about .content h2 {
-    font-size: 1.6rem;
-    color: var(--secondary);
+  font-size: 1.6rem;
+  color: var(--secondary);
 }
 
 .about .content p {
-    font-size: 1.2rem;
-    color: var(--secondary);
-    text-align: center;
+  font-size: 1.2rem;
+  color: var(--secondary);
+  text-align: center;
 }
 
 .about h4 {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .about ul {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
 }
 
 .about li span,
 .about li img {
-    width: 1.6rem;
-    height: 1.6rem;
-    font-size: 2rem;
-    color: black;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 2rem;
+  color: black;
 }
 
 .about li:nth-child(2) img {
-    width: 2rem;
-    border-radius: 1px solid red;
+  width: 2rem;
+  border-radius: 1px solid red;
 }
 
 .about li:hover {
-    transform: scale(120%);
-    transition: transform 0.5 var(--pop);
+  transform: scale(120%);
+  transition: transform 0.5 var(--pop);
 }
 
 .portfolio {
-    background-color: var(--secondary);
-    height: auto;
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--secondary);
+  height: auto;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio h2 {
-    color: var(--white);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .portfolio .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
 }
 
 .portfolio .card {
-    width: 100%;
-    background-color: var(--white);
-    overflow: hidden;
-    border-radius: 12px;
-    flex-basis: 100%;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 12px;
+  flex-basis: 100%;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio .image {
-    width: 100%;
-    height: 160px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
 }
 
 .portfolio .image img {
-    width: 100%;
+  width: 100%;
 }
 
 .portfolio .card-content {
-    padding: 2rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio .card h3 {
-    color: var(--secondary);
-    font-weight: 800;
-    font-size: 1.2rem;
+  color: var(--secondary);
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 
 .portfolio .card h4 {
-    color: var(--secondary);
-    font-size: 1rem;
+  color: var(--secondary);
+  font-size: 1rem;
 }
 
 .portfolio p {
-    color: var(--secondary);
-    font-size: 1rem;
-    margin: 0.4rem 0;
+  color: var(--secondary);
+  font-size: 1rem;
+  margin: 0.4rem 0;
 }
 
 .portfolio .links {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 1rem;
-    margin-top: 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .portfolio .links a {
-    width: 100px;
-    color: var(--white);
-    text-align: center;
-    font-size: 1.6rem;
-    background-color: var(--third);
-    padding: 0.4rem 1rem;
-    border-radius: 4px;
+  width: 100px;
+  color: var(--white);
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: var(--third);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
 }
 
-.portfolio .links a[aria-disabled=true] {
-    opacity: 0.4;
-    cursor: not-allowed;
-    transition: opacity 0.4s ease;
+.portfolio .links a[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transition: opacity 0.4s ease;
 }
 
 .portfolio .links a:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* logo flip */
 .flip-vert .logo-inner {
-    transform: rotateX(180deg);
-    transition: all 1500ms var(--pop);
+  transform: rotateX(180deg);
+  transition: all 1500ms var(--pop);
 }
 
 .flip-hor .logo-inner {
-    transform: rotateY(180deg);
-    transition: all 1500ms var(--pop);
+  transform: rotateY(180deg);
+  transition: all 1500ms var(--pop);
 }
 
 .logo-front,
 .logo-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    background-image: url('/images/icons-new_gry_blue/react.svg');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-image: url('/images/icons-new_gry_blue/react.svg');
 }
 
 .logo-back {
-    transform: rotateX(180deg);
-    background-image: url('/images/icons-new_gry_blue/node.svg');
+  transform: rotateX(180deg);
+  background-image: url('/images/icons-new_gry_blue/node.svg');
 }
 
 .hor {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 @media screen and (min-width: 865px) {
-    .portfolio .content .card {
-        flex-basis: 48%;
-    }
-
+  .portfolio .content .card {
+    flex-basis: 48%;
+  }
 }
